@@ -1,0 +1,21 @@
+.table {
+	width: 100%;
+	text-align: center;
+	border-right: 1px solid;
+	border-top: 1px solid;
+}
+
+
+.table td{
+	text-align: left;
+	background-color: #EEEEEE;
+	min-width: 254px;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+} 
+
+.table th{
+	background-color: #79B7E7;
+	border-left: 1px solid;
+}
