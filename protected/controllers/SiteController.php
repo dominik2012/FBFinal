@@ -511,7 +511,6 @@ class SiteController extends Controller
 			}
 			
 			//prevPhase / nextPhase
-			
 			$aktFktImArray = 0;
 			for($i=0;$i<count($funktion);$i++){
 				if($funktion[$i]["nummer"]==($fktNr-1)){

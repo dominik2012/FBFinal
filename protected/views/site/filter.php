@@ -36,15 +36,15 @@ if(Yii::app()->user->level>=5){
     <meta charset="utf-8">
     <title>Funktionsfilter</title>
     
-    <link rel="stylesheet" href="/finanzberatung/jquery-multi/css/jquery-ui-1.8.9.custom/jquery-ui-1.8.9.custom.css">
-    <link rel="stylesheet" href="/finanzberatung/multiselect/jquery.multiselect.css">
-    <script src="/finanzberatung/jquery-ui/js/jquery-1.8.2.js"></script>
-    <script src="/finanzberatung/jquery-ui/js/jquery-ui-1.9.0.custom.js"></script>
-    <script src="/finanzberatung/jquery-multi/jquery.multi-accordion-1.5.3.js"></script>
-    <script src="/finanzberatung/multiselect/src/jquery.multiselect.js"></script>
+    <link rel="stylesheet" href="/FBFinal/jquery-multi/css/jquery-ui-1.8.9.custom/jquery-ui-1.8.9.custom.css">
+    <link rel="stylesheet" href="/FBFinal/multiselect/jquery.multiselect.css">
+    <script src="/FBFinal/jquery-ui/js/jquery-1.8.2.js"></script>
+    <script src="/FBFinal/jquery-ui/js/jquery-ui-1.9.0.custom.js"></script>
+    <script src="/FBFinal/jquery-multi/jquery.multi-accordion-1.5.3.js"></script>
+    <script src="/FBFinal/multiselect/src/jquery.multiselect.js"></script>
     
-    <link rel="stylesheet" href="/finanzberatung/chosen-master/chosen/chosen.css">
-    <script src="/finanzberatung/chosen-master/chosen/chosen.jquery.js"></script>
+    <link rel="stylesheet" href="/FBFinal/chosen-master/chosen/chosen.css">
+    <script src="/FBFinal/chosen-master/chosen/chosen.jquery.js"></script>
     
     <script type="text/javascript">
     //VIEWFILTER
@@ -66,7 +66,7 @@ if(Yii::app()->user->level>=5){
 
     <div class="form">
 	
-		<form name="neu_form" id="neu_form" action="/Finanzberatung/index.php?r=site/filter" method="POST">
+		<form name="neu_form" id="neu_form" action="/FBFinal/index.php?r=site/filter" method="POST">
                 <div style="float:left;">
                 <div class="allgemein">
                 <div id="functionoverview">Allgemein</div>
@@ -593,7 +593,7 @@ if(Yii::app()->user->level>=5){
             $fktGesetze ="";
             
             for($k=0;$k<count($gesetze[$i]);$k++){	
-            $fktGesetze .=($k+1).'. '.$gesetze[$i][$k]["gesetz"].'<br/>'; //TESTING
+                $fktGesetze .=($k+1).'. '.$gesetze[$i][$k]["gesetz"].'<br/>';
             }
             //keine Unterphase = X
             if($uphaseNr==0){
@@ -653,24 +653,24 @@ if(Yii::app()->user->level>=5){
                             //Grafik Abfragen
                             if($j<45){
                             if($spaInhalt == "gesetzFunktion"){
-                                $spaInhalt = "<img title='Funktion bedingt durch Gesetz' src='/Finanzberatung/css/images/pfeile/gesetzFunktion.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Funktion bedingt durch Gesetz' src='/FBFinal/css/images/pfeile/gesetzFunktion.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaInhalt == "funktionGesetz"){
-                                $spaInhalt = "<img title='Gesetz bedingt durch Funktion'src='/Finanzberatung/css/images/pfeile/funktionGesetz.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Gesetz bedingt durch Funktion'src='/FBFinal/css/images/pfeile/funktionGesetz.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaInhalt == "keine Abhängig"){
                                //if($spaName == "Privat mit Beratung" || $spaName == "Privat ohne Beratung" || $spaName == "Professionell mit Beratung" || $spaName == "Professionell ohne Beratung" || $spaName == "Reines Ausfuehrungsgeschäft")
-                                $spaInhalt = "<img title='Keine Regularien' src='/Finanzberatung/css/images/pfeile/null.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Keine Regularien' src='/FBFinal/css/images/pfeile/null.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaInhalt == "gelb"){
-                                $spaInhalt = "<img title='Geringer Handlungsspielraum' src='/Finanzberatung/css/images/pfeile/gelb.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Geringer Handlungsspielraum' src='/FBFinal/css/images/pfeile/gelb.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaInhalt == "gruen"){
-                                $spaInhalt = "<img title='Normaler Handlungsspielraum' src='/Finanzberatung/css/images/pfeile/gruen.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Normaler Handlungsspielraum' src='/FBFinal/css/images/pfeile/gruen.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }
                             else if($spaInhalt == "gelbHoch"){
-                                $spaInhalt = "<img title='Handlungsspielraum zukünftig weiter eingeschränkt' src='/Finanzberatung/css/images/pfeile/gelbHoch.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Handlungsspielraum zukünftig weiter eingeschränkt' src='/FBFinal/css/images/pfeile/gelbHoch.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaName == "Filiale Minimum Dauer" || $spaName == "Filiale Empfehlung Dauer" || $spaName == "Online Minimum Dauer" || $spaName == "Online Empfehlung Dauer" || $spaName == "Mobil Minimum Dauer" || $spaName == "Mobil Empfehlung Dauer"){
                                 $spaInhalt .= ' min';
