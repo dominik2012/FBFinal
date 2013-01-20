@@ -129,7 +129,6 @@ class SiteController extends Controller
 		$spaltennamen2[45] = "b_name";
 		$spaltennamen2[46] = "auslegung";
                 $spaltennamen = Funktion::model()->attributeLabelsIndexAreNumbers();
-                
                 $unterphase2 = Unterphase::model()->findAllBySql("SELECT * FROM unterphase");
                 $gesetz2 = Gesetz::model()->findAllBySql("SELECT * FROM gesetz");
 
@@ -138,44 +137,52 @@ class SiteController extends Controller
 			$funktionGes = Funktion::model()->findAllBySql("SELECT * FROM funktion");
 		}
 		else{
+                        //angezeigte Tabelle
 			$funktionGes = Funktion2::model()->findAllBySql("SELECT * FROM funktion");
+                        //um Sprünge-ID zu bekommen
+                        //$funktionAlle = Funktion::model()->findAllBySql("SELECT * FROM funktion");
 		}
                     
                 //Funktion für Buttons (Popup)
-                $spruengeLength = count($funktionGes);
+                $anzFunktionen = count($funktionGes);
                 
-                for($i=0;$i<$spruengeLength;$i++){
+                for($i=0;$i<$anzFunktionen;$i++){
                         $sprungstellen = $funktionGes[$i]["sprungstelle"];
                         $funktionsfolgen = $funktionGes[$i]["funktionsfolge"];
                         $temp = null;
                         $ausgabeGesamt = null;
-                      if($sprungstellen != null){
-                        $fktNummern = explode(",", $sprungstellen);
-                        $fktNrLength = count($fktNummern);
                         
-                        for($j=0; $j<$fktNrLength; $j++){
-                            $fktNr = $funktionGes[$fktNummern[$j]]["nummer"]-1;
-                            $fktName = $funktionGes[$fktNr-1]["name"];
-                            $temp = '['.$fktNr.']  '.$fktName.',,';
+                        //Wenn Sprungstellen vorhanden...
+                        if($sprungstellen != null){
+                            $fktNummern = explode(",", $sprungstellen);
+                            $fktNrLength = count($fktNummern);
+                        
+                            for($j=0; $j<$fktNrLength; $j++){
+                                $fktID = Funktion::model()->findAllbySql("SELECT id FROM funktion WHERE nummer = $fktNummern[$j]");
+                                $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
+                                $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
+                                $temp = '['.$fktNr.']  '.$fktName.',,';
                             
-                            if($j == $fktNrLength-1){
-                                $length = strlen($temp);
-                                $temp = $temp.substr(0, $length-2);
-                            }
+                                if($j == $fktNrLength-1){
+                                    $length = strlen($temp);
+                                    $temp = $temp.substr(0, $length-2);
+                                }
 
-                            if($ausgabeGesamt == null){
-                                $ausgabeGesamt = $temp;
-                            }else{
-                                $ausgabeGesamt .= $temp;
+                                if($ausgabeGesamt == null){
+                                    $ausgabeGesamt = $temp;
+                                }else{
+                                    $ausgabeGesamt .= $temp;
+                                }
                             }
-                        }
-                        $sprungstellenArr[$i] = $ausgabeGesamt;
+                            $sprungstellenArr[$i] = $ausgabeGesamt;
                       }else{
                         $sprungstellenArr[$i] = null;
                       }
                       
                       $temp = null;
                       $ausgabeGesamt = null;
+                      
+                      //Wenn Funktionsfolgen vorhanden sind...
                       if($funktionsfolgen != null){
                         $fktNummern = explode(",", $funktionsfolgen);
                         $fktNrLength = count($fktNummern);

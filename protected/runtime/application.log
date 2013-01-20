@@ -588,3 +588,58 @@ Stack trace:
 REQUEST_URI=/Finanzberatung/index.php?r=site/filter
 in C:\xampp\htdocs\Finanzberatung\protected\controllers\SiteController.php (162)
 in C:\xampp\htdocs\Finanzberatung\index.php (13)
+2013/01/20 12:30:46 [error] [php] Illegal offset type (C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php:162)
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\FBFinal\index.php(13): CWebApplication->run()
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (162)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/20 12:32:37 [error] [php] Illegal offset type (C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php:163)
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\FBFinal\index.php(13): CWebApplication->run()
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (163)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/20 12:34:09 [error] [php] Array to string conversion (C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php:162)
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\FBFinal\index.php(13): CWebApplication->run()
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (162)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/20 12:37:18 [error] [php] Illegal offset type (C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php:163)
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\FBFinal\index.php(13): CWebApplication->run()
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (163)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/20 12:38:53 [error] [php] Undefined variable: funktionAlle (C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php:163)
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\FBFinal\index.php(13): CWebApplication->run()
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (163)
+in C:\xampp\htdocs\FBFinal\index.php (13)
