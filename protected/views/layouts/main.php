@@ -34,36 +34,35 @@
                                 ),
                                 array(  'label'=>'Filter', 
                                         'url'=>array('/site/filter'),
-										'visible'=>Yii::app()->user->level>=5,
+					'visible'=>Yii::app()->user->level>=5,
                                 ),
 				array(  'label'=>'Benutzerverwaltung', 
                                         'url'=>array('/userGroups/admin'), 
-                                        'visible'=>Yii::app()->user->level>=10,
-                                ),
+                                        'visible'=>Yii::app()->user->level>99,
+                                ),/*
                                 array(  'label'=>'Übersicht', 
                                         'url'=>array('/userGroups/user/view'), 
                                         'visible'=>Yii::app()->user->groupName==='Registration',
-                                ),
-								
-                                array(  'label'=>'Login', 
-                                        'url'=>array('/userGroups'), 
-                                        'visible'=>Yii::app()->user->isGuest
-                                ),
-				array(  'label'=>'Logout ('.Yii::app()->user->name.')', 
-                                        'url'=>array('/userGroups/user/logout'), 
-                                        'visible'=>!Yii::app()->user->isGuest,
-                                ),
+                                ),*/
                                 array(  'label'=>'Kontakt', 
                                         'url'=>array('/site/contact')
                                 ),
                                 array(  'label'=>'About', 
                                         'url'=>array('/site/page', 'view'=>'about')
                                 ),
+                                array(  'label'=>'Logout ('.Yii::app()->user->name.')', 
+                                        'url'=>array('/userGroups/user/logout'), 
+                                        'visible'=>!Yii::app()->user->isGuest,
+                                ),
+                                array(  'label'=>'Login', 
+                                        'url'=>array('/userGroups'), 
+                                        'visible'=>Yii::app()->user->isGuest
+                                ),/*
                                 array(  'label'=>'Details', 
                                         'url'=>array('/site/details'),
-										'visible'=>Yii::app()->user->level>=5,
+					'visible'=>Yii::app()->user->level>=5,
 										
-                                ),
+                                ),*/
                         ),
                     )); ?>
 	</div><!-- mainmenu -->
