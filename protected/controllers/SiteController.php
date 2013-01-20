@@ -140,92 +140,6 @@ class SiteController extends Controller
 			$funktionGes = Funktion2::model()->findAllBySql("SELECT * FROM funktion2");
 		}
                     
-                //Funktion für Buttons (Popup)
-                $anzFunktionen = count($funktionGes);
-                
-                for($i=0;$i<$anzFunktionen;$i++){
-                        $sprungstellen = $funktionGes[$i]["sprungstelle"];
-                        $funktionsfolgen = $funktionGes[$i]["funktionsfolge"];
-                        $temp = null;
-                        $ausgabeGesamt = null;
-                        
-                        //Wenn Sprungstellen vorhanden...
-                        if($sprungstellen != null){
-                            $fktNummern = explode(",", $sprungstellen);
-                            $fktNrLength = count($fktNummern);
-                        
-                            for($j=0; $j<$fktNrLength; $j++){
-                                
-                                if(Yii::app()->user->level>5){
-                                    $fktID = Funktion::model()->findAllbySql("SELECT id FROM funktion WHERE funktion.nummer = $fktNummern[$j]");
-                                    $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
-                                    $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
-                                }else{
-                                    $fktID = Funktion2::model()->findAllbySql("SELECT id FROM funktion2 WHERE funktion2.nummer = $fktNummern[$j]");
-                                    $fktNr = $funktionGes[$fktID[0]["id"]]["nummer"];
-                                    $fktName = $funktionGes[$fktID[0]["id"]]["name"];
-                                }
-                                
-                                $temp = '['.$fktNr.']  '.$fktName.',,';
-                                
-                                //letzten 2 Kommas entfernen
-                                if($j == $fktNrLength-1){
-                                    $length = strlen($temp);
-                                    $temp = $temp.substr(0, $length-2);
-                                }
-
-                                if($ausgabeGesamt == null){
-                                    $ausgabeGesamt = $temp;
-                                }else{
-                                    $ausgabeGesamt .= $temp;
-                                }
-                            }
-                            $sprungstellenArr[$i] = $ausgabeGesamt;
-                      }else{
-                        $sprungstellenArr[$i] = null;
-                      }
-                      
-                      //reset
-                      $temp = null;
-                      $ausgabeGesamt = null;
-                      
-                      //Wenn Funktionsfolgen vorhanden sind...
-                      if($funktionsfolgen != null){
-                        $fktNummern = explode(",", $funktionsfolgen);
-                        $fktNrLength = count($fktNummern);
-                        
-                        for($j=0; $j<$fktNrLength; $j++){
-                            
-                                if(Yii::app()->user->level>5){
-                                    $fktID = Funktion::model()->findAllbySql("SELECT id FROM funktion WHERE funktion.nummer = $fktNummern[$j]");
-                                    $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
-                                    $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
-                                }else{
-                                    $fktID = Funktion2::model()->findAllbySql("SELECT id FROM funktion2 WHERE funktion2.nummer = $fktNummern[$j]");
-                                    $fktNr = $funktionGes[$fktID[0]["id"]]["nummer"];
-                                    $fktName = $funktionGes[$fktID[0]["id"]]["name"];
-                                }
-
-                                $temp = '['.$fktNr.']  '.$fktName.',,';
-                                
-                                //letzten 2 Kommas entfernen
-                                if($j == $fktNrLength-1){
-                                    $length = strlen($temp);
-                                    $temp = $temp.substr(0, $length-2);
-                                }
-
-                                if($ausgabeGesamt == null){
-                                    $ausgabeGesamt = $temp;
-                                }else{
-                                    $ausgabeGesamt .= $temp;
-                                }
-                            }
-                        $funktionsfolgenArr[$i] = $ausgabeGesamt;
-                      }else{
-                        $funktionsfolgenArr[$i] = null;
-                      }
-                }
-		
 		//Aufruf der get-Methoden der jeweiligen Models
 		$modelGrobphase = Grobphase::model()->getAttr();
 		$modelUnterphase = Unterphase::model()->getAttr();
@@ -427,6 +341,92 @@ class SiteController extends Controller
 					}
 				}
 				
+                //Funktion für Buttons (Popup)
+                $anzFunktionen = count($funktion);
+                
+                for($i=0;$i<$anzFunktionen;$i++){
+                        $sprungstellen = $funktion[$i]["sprungstelle"];
+                        $funktionsfolgen = $funktion[$i]["funktionsfolge"];
+                        $temp = null;
+                        $ausgabeGesamt = null;
+                        
+                        //Wenn Sprungstellen vorhanden...
+                        if($sprungstellen != null){
+                            $fktNummern = explode(",", $sprungstellen);
+                            $fktNrLength = count($fktNummern);
+                        
+                            for($j=0; $j<$fktNrLength; $j++){
+                                
+                                if(Yii::app()->user->level>5){
+                                    $fktID = Funktion::model()->findAllbySql("SELECT id FROM funktion WHERE funktion.nummer = $fktNummern[$j]");
+                                    $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
+                                    $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
+                                }else{
+                                    $fktID = Funktion2::model()->findAllbySql("SELECT id FROM funktion2 WHERE funktion2.nummer = $fktNummern[$j]");
+                                    $fktNr = $funktionGes[0]["nummer"];//fehler
+                                    $fktName = $funktionGes[0]["name"];
+                                }
+                                
+                                $temp = '['.$fktNr.']  '.$fktName.',,';
+                                
+                                //letzten 2 Kommas entfernen
+                                if($j == $fktNrLength-1){
+                                    $length = strlen($temp);
+                                    $temp = $temp.substr(0, $length-2);
+                                }
+
+                                if($ausgabeGesamt == null){
+                                    $ausgabeGesamt = $temp;
+                                }else{
+                                    $ausgabeGesamt .= $temp;
+                                }
+                            }
+                            $sprungstellenArr[$i] = $ausgabeGesamt;
+                      }else{
+                        $sprungstellenArr[$i] = null;
+                      }
+                      
+                      //reset
+                      $temp = null;
+                      $ausgabeGesamt = null;
+                      
+                      //Wenn Funktionsfolgen vorhanden sind...
+                      if($funktionsfolgen != null){
+                        $fktNummern = explode(",", $funktionsfolgen);
+                        $fktNrLength = count($fktNummern);
+                        
+                        for($j=0; $j<$fktNrLength; $j++){
+                            
+                                if(Yii::app()->user->level>5){
+                                    $fktID = Funktion::model()->findAllbySql("SELECT id FROM funktion WHERE funktion.nummer = $fktNummern[$j]");
+                                    $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
+                                    $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
+                                }else{
+                                    $fktID = Funktion2::model()->findAllbySql("SELECT id FROM funktion2 WHERE funktion2.nummer = $fktNummern[$j]");
+                                    $fktNr = $funktionGes[$fktID[0]["id"]]["nummer"];
+                                    $fktName = $funktionGes[$fktID[0]["id"]]["name"];
+                                }
+
+                                $temp = '['.$fktNr.']  '.$fktName.',,';
+                                
+                                //letzten 2 Kommas entfernen
+                                if($j == $fktNrLength-1){
+                                    $length = strlen($temp);
+                                    $temp = $temp.substr(0, $length-2);
+                                }
+
+                                if($ausgabeGesamt == null){
+                                    $ausgabeGesamt = $temp;
+                                }else{
+                                    $ausgabeGesamt .= $temp;
+                                }
+                            }
+                        $funktionsfolgenArr[$i] = $ausgabeGesamt;
+                      }else{
+                        $funktionsfolgenArr[$i] = null;
+                      }
+                }
+                                
 			if($funktion[0]["id"]!="leer"){
 				$this->render('filter',array( 'gesetz2' => $gesetz2, 'funktionsfolgenArr' => $funktionsfolgenArr,'sprungstellenArr' => $sprungstellenArr, 'gesetze'=>$gesetze,'unterphase2'=>$unterphase2,'fil'=>$sql,'model'=>$funktion, 'model2' =>$model2, 'model3' =>$funktion, 'model4' => $fil_grobphase, 'name' => $fil_name, 'hsrz' => $fil_hsrz, 'hsra' => $fil_hsra, 'privob' => $fil_privob, 'profob' => $fil_profob, 'rausfg' => $fil_rausfg,'unterphase' => $fil_unterphase, 'privmb' => $fil_privmb, 'profmb' => $fil_profmb, 'fil_gesetze' => $fil_gesetze, 'model6' => $spaltennamen, 'model5' => $spaltennamen2, 'grobphase' => $grobphase,));
 			}

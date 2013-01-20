@@ -15,8 +15,6 @@ class UGDefaultController extends Controller
 			$this->forward('/userGroups/user/view');
 		else if (Yii::app()->user->isGuest)
 			$this->forward('/userGroups/user/login');
-//                else if (Yii::app()->user->groupName==='Registration')
-//                        $this->forward('/userGroups/user/view');
 		else
 			$this->forward('/userGroups/user/view');
 	}

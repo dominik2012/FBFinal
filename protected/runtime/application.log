@@ -1149,3 +1149,47 @@ Stack trace:
 REQUEST_URI=/FBFinal/index.php?r=site/filter
 in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (165)
 in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/20 19:06:14 [error] [php] Undefined offset: 34 (C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php:362)
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\FBFinal\index.php(13): CWebApplication->run()
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (362)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/20 19:09:44 [error] [php] Undefined offset: 34 (C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php:362)
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\FBFinal\index.php(13): CWebApplication->run()
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (362)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/20 19:19:32 [error] [php] Undefined offset: 34 (C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php:363)
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\FBFinal\index.php(13): CWebApplication->run()
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (363)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/20 19:21:37 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php:366)
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): SiteController->run()
+#3 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\FBFinal\index.php(13): CWebApplication->run()
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (366)
+in C:\xampp\htdocs\FBFinal\index.php (13)
