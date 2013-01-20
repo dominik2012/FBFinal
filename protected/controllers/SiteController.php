@@ -143,7 +143,7 @@ class SiteController extends Controller
                 $spruengeLength = count($funktionGes);
                 
                 for($i=0;$i<$spruengeLength;$i++){
-                        $sprungstellen = $funktionGes[2]["sprungstelle"];
+                        $sprungstellen = $funktionGes[$i]["sprungstelle"];
                         $funktionsfolgen = $funktionGes[$i]["funktionsfolge"];
                         $temp = null;
                         $ausgabeGesamt = null;
@@ -658,6 +658,5 @@ class SiteController extends Controller
 			
 			
             $this->render('details', array( 'auslegungenGesetz' => $auslegungG, 'auslegungenBR' => $auslegungBR, 'gesetze' => $gesetze, 'business_rules' => $business_rules, 'nextPhase'=>$nextPhase, 'prevPhase'=>$prevPhase, 'prevFkt'=>$prevFkt, 'nextFkt'=>$nextFkt, 'funktion'=>$funktion, 'funktionsdaten'=>$funktionsdaten, 'fktNr'=>$fktNr, 'grobphase'=>$grobphase, 'unterphase'=>$unterphase));
->>>>>>> Abschluss v 1
         }
 }
