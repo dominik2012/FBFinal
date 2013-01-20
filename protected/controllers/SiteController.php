@@ -132,14 +132,16 @@ class SiteController extends Controller
                 
                 $unterphase2 = Unterphase::model()->findAllBySql("SELECT * FROM unterphase");
                 $gesetz2 = Gesetz::model()->findAllBySql("SELECT * FROM gesetz");
-                //$gesetze = $gesetz->gesetze;
-                
-				if(Yii::app()->user->level>5){
-					$funktionGes = Funktion::model()->findAllBySql("SELECT * FROM funktion");
-				}
-				else{
-					$funktionGes = Funktion2::model()->findAllBySql("SELECT * FROM funktion");
-				}
+
+                //Unterscheidung zwischen Demo-User u. vollwertiger User
+		if(Yii::app()->user->level>5){
+			$funktionGes = Funktion::model()->findAllBySql("SELECT * FROM funktion");
+		}
+		else{
+			$funktionGes = Funktion2::model()->findAllBySql("SELECT * FROM funktion");
+		}
+                    
+                //Funktion für Buttons (Popup)
                 $spruengeLength = count($funktionGes);
                 
                 for($i=0;$i<$spruengeLength;$i++){
@@ -401,34 +403,6 @@ class SiteController extends Controller
 					}
 				}
 				
-
-                        //Array mit Funktionsfolgen 
-                        /*
-                        $arrFolge = 0;
-                        $temp = 0;
-                        $j=0;
-                        
-                        for($i=0; $i<count($funktionGes); $i++){
-                            if($funktionGes[$i]["funktionsfolge"] == "x"){
-                                if($temp == 1){
-                                    $j++;
-                                }
-                                $k=0;
-                                $temp = 0;
-                                $arrFolge[$j]["folge"] = $i;
-                                $k++;
-                            }else if($funktionGes[$i]["funktionsfolge"] == "o"){
-                                if($temp == 0){
-                                    $j++;
-                                }
-                                $k=0;
-                                $temp = 1;
-                                $arrFolge[$j][$k] = $i;
-                                $k++;
-                            }else if($funktionGes[$i]["funktionsfolge"] == null){
-                                //do nothing
-                            }
-                        } */
 			if($funktion[0]["id"]!="leer"){
 				$this->render('filter',array( 'gesetz2' => $gesetz2, 'funktionsfolgenArr' => $funktionsfolgenArr,'sprungstellenArr' => $sprungstellenArr, 'gesetze'=>$gesetze,'unterphase2'=>$unterphase2,'fil'=>$sql,'model'=>$funktion, 'model2' =>$model2, 'model3' =>$funktion, 'model4' => $fil_grobphase, 'name' => $fil_name, 'hsrz' => $fil_hsrz, 'hsra' => $fil_hsra, 'privob' => $fil_privob, 'profob' => $fil_profob, 'rausfg' => $fil_rausfg,'unterphase' => $fil_unterphase, 'privmb' => $fil_privmb, 'profmb' => $fil_profmb, 'fil_gesetze' => $fil_gesetze, 'model6' => $spaltennamen, 'model5' => $spaltennamen2, 'grobphase' => $grobphase,));
 			}
@@ -438,6 +412,7 @@ class SiteController extends Controller
 		
 	}
         
+         //Action Detailseite
          public function actionDetails($fktNr){
             $fktNr = (int)($fktNr);
             //$funktionsdaten = Funktion::model()->getRowByNumber($fktNr);
@@ -484,106 +459,13 @@ class SiteController extends Controller
 			else{
 				$auslegungBR=null;
 				}
-            //$business_rules = $funktionsdaten['business_rules'];
-            //$gesetze = $funktionsdaten['gesetze'];
-            //$auslegung = $funktionsdaten->auslegung;
-			//$business_rules= "asd";
-			
-			
-			/*
-            $j=0;
-            $sprung[$j] = 0;
-            $lastFct = 0;
-            $temp = 1;
-            $length = count($funktion);
-            
-            $nr = 0;
-			
-            $prevFkt = 0;
-            $nextFkt = 0;
-            $prevPhase = 0;
-            $nextPhase = 0;
-        
-            for($i=0;$i<$length;$i++){
-            
-                if($temp == $funktion[$i]['grobphase_id']){
-                
-                }else{
-                    $sprung[$j] = $funktion[$i]['nummer'];
-                    $j++;
-                }
-            
-                $lastFct = $funktion[$i]['nummer'];
-            
-                $temp = $funktion[$i]['grobphase_id'];
-            
-            }
-            $arrLength = count($sprung);
-            
-            //prevFct
-            if($fktNr == $sprung[0]){
-                $prevFkt = $lastFct;
-            }else {
-                $prevFkt = $fktNr-1;
-            }
-            
-            //nextFct
-            if($fktNr == $lastFct) {
-                $nextFkt = 1;
-            }else {
-                $nextFkt = $fktNr+1;
-            }
-            
-            //prevPhase
-            for($i=0;$i<=$arrLength-1;$i++) {
-              
-                if($fktNr == $sprung[0] || $fktNr < $sprung[1]) {
-                    $nr = $arrLength-1;
-                    break;
-                }else if($fktNr == $sprung[$i]) {
-                    $nr = $i-1;
-                    break;
-                }else if($fktNr > $sprung[$arrLength-1]){
-                    $nr = $arrLength-2;
-                    break;
-                }else if($fktNr < $sprung[$i]){
-                    $nr = $i-2;
-                    break;
-                }
-            }
-            $prevPhase = $sprung[$nr];
-            
-            //nextPhase
-            for($i=1;$i<=$arrLength;$i++) {
-                if($fktNr < $sprung[1]) {
-                    $nr = 1;
-                    break;
-                }else if($fktNr < $sprung[$arrLength-1] && $fktNr > $sprung[$arrLength-2]){
-                    $nr = $arrLength-1;
-                    break;
-                }else  if($fktNr == $sprung[$arrLength-1] || $fktNr > $sprung[$arrLength-1]) {
-                    $nr = 0;
-                    break;    
-                }else  if($fktNr == $sprung[$i]) {
-                    $nr = $i+1;
-                    break;
-                }else  if($fktNr < $sprung[$i]) {
-                    $nr = $i;
-                    break;
-                }
-            }
-            $nextPhase = $sprung[$nr];
-<<<<<<< HEAD
-            
-            $this->render('details', array( 'auslegungenGesetz' => $auslegungG, 'auslegungenBR' => $auslegungBR, 'gesetze' => $gesetze, 'business_rules' => $business_rules, 'sprung'=>$sprung, 'nextPhase'=>$nextPhase, 'prevPhase'=>$prevPhase, 'prevFkt'=>$prevFkt, 'nextFkt'=>$nextFkt, 'funktion'=>$funktion, 'funktionsdaten'=>$funktionsdaten, 'fktNr'=>$fktNr, 'grobphase'=>$grobphase, 'unterphase'=>$unterphase));
-=======
-            */
-			
-			
-	    $prevFkt = 0;
-            $nextFkt = 0;
-            $prevPhase = 0;
-            $nextPhase = 0;
+
+                                
+                        //Funktion für Detail-Buttons vor/zurück usw.        
+                        $prevFkt = 0;
+                        $nextFkt = 0;
+                        $prevPhase = 0;
+                        $nextPhase = 0;
 			
 			$first = $funktion[0]["nummer"];
 			$last = $funktion[count($funktion)-1]["nummer"];
