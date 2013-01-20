@@ -162,8 +162,8 @@ class SiteController extends Controller
                                     $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
                                 }else{
                                     $fktID = Funktion2::model()->findAllbySql("SELECT id FROM funktion2 WHERE funktion2.nummer = $fktNummern[$j]");
-                                    $fktNr = $funktionGes[2]["nummer"];
-                                    $fktName = $funktionGes[2]["name"];
+                                    $fktNr = $funktionGes[$fktID[0]["id"]]["nummer"];
+                                    $fktName = $funktionGes[$fktID[0]["id"]]["name"];
                                 }
                                 
                                 $temp = '['.$fktNr.']  '.$fktName.',,';
