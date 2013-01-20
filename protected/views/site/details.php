@@ -6,15 +6,15 @@ if(Yii::app()->user->level>=5){
 <head>
     <meta charset="utf-8">
     <title>Detailansicht</title>
-    <link rel="stylesheet" href="/finanzberatung/jquery-multi/css/jquery-ui-1.8.9.custom/jquery-ui-1.8.9.custom.css">
-    <script src="/finanzberatung/jquery-ui/js/jquery-1.8.2.js"></script>
-    <script src="/finanzberatung/jquery-ui/js/jquery-ui-1.9.0.custom.js"></script>
+    <link rel="stylesheet" href="/FBFinal/jquery-multi/css/jquery-ui-1.8.9.custom/jquery-ui-1.8.9.custom.css">
+    <script src="/FBFinal/jquery-ui/js/jquery-1.8.2.js"></script>
+    <script src="/FBFinal/jquery-ui/js/jquery-ui-1.9.0.custom.js"></script>
     
 </head>
 <body>
 <?php   
     $fktNr = (int)($fktNr);
-    $link = "http://localhost/Finanzberatung/index.php?r=site/details&fktNr=";
+    $link = "http://localhost/FBFinal/index.php?r=site/details&fktNr=";
     //$sprung = $sprung;
     $pFkt = $prevFkt;
     $nFkt = $nextFkt;
@@ -72,10 +72,10 @@ if(Yii::app()->user->level>=5){
                     <td>
                     <?php 
                         if($funktionsdaten['priv_mit_beratung']== 'gesetzFunktion'){
-                            echo "<img title='Funktion bedingt durch Gesetz' src='/Finanzberatung/css/images/pfeile/gesetzFunktion.png'>";
+                            echo "<img title='Funktion bedingt durch Gesetz' src='/FBFinal/css/images/pfeile/gesetzFunktion.png'>";
                         }
                         elseif($funktionsdaten['priv_mit_beratung'] == 'funktionGesetz'){
-                            echo "<img title='Gesetz bedingt durch Funktion'src='/Finanzberatung/css/images/pfeile/funktionGesetz.png'>";
+                            echo "<img title='Gesetz bedingt durch Funktion'src='/FBFinal/css/images/pfeile/funktionGesetz.png'>";
                         }
                         else{ echo"";}
                     ?>
@@ -83,10 +83,10 @@ if(Yii::app()->user->level>=5){
                     <td>
                     <?php 
                         if($funktionsdaten['prof_mit_beratung'] == 'gesetzFunktion'){
-                            echo "<img title='Funktion bedingt durch Gesetz' src='/Finanzberatung/css/images/pfeile/gesetzFunktion.png'>";
+                            echo "<img title='Funktion bedingt durch Gesetz' src='/FBFinal/css/images/pfeile/gesetzFunktion.png'>";
                         }
                         elseif($funktionsdaten['prof_mit_beratung'] == 'funktionGesetz'){
-                            echo "<img title='Gesetz bedingt durch Funktion'src='/Finanzberatung/css/images/pfeile/funktionGesetz.png'>";
+                            echo "<img title='Gesetz bedingt durch Funktion'src='/FBFinal/css/images/pfeile/funktionGesetz.png'>";
                         }
                         else{ echo"";}
                     ?>                       
@@ -94,10 +94,10 @@ if(Yii::app()->user->level>=5){
                     <td>
                     <?php 
                         if($funktionsdaten['priv_ohne_beratung'] == 'gesetzFunktion'){
-                            echo "<img title='Funktion bedingt durch Gesetz' src='/Finanzberatung/css/images/pfeile/gesetzFunktion.png'>";
+                            echo "<img title='Funktion bedingt durch Gesetz' src='/FBFinal/css/images/pfeile/gesetzFunktion.png'>";
                         }
                         elseif($funktionsdaten['priv_ohne_beratung'] == 'funktionGesetz'){
-                            echo "<img title='Gesetz bedingt durch Funktion'src='/Finanzberatung/css/images/pfeile/funktionGesetz.png'>";
+                            echo "<img title='Gesetz bedingt durch Funktion'src='/FBFinal/css/images/pfeile/funktionGesetz.png'>";
                         }
                         else{ echo"";}
                     ?>
@@ -105,10 +105,10 @@ if(Yii::app()->user->level>=5){
                     <td>
                     <?php 
                         if($funktionsdaten['prof_ohne_beratung'] == 'gesetzFunktion'){
-                            echo "<img title='Funktion bedingt durch Gesetz' src='/Finanzberatung/css/images/pfeile/gesetzFunktion.png'>";
+                            echo "<img title='Funktion bedingt durch Gesetz' src='/FBFinal/css/images/pfeile/gesetzFunktion.png'>";
                         }
                         elseif($funktionsdaten['prof_ohne_beratung'] == 'funktionGesetz'){
-                            echo "<img title='Gesetz bedingt durch Funktion'src='/Finanzberatung/css/images/pfeile/funktionGesetz.png'>";
+                            echo "<img title='Gesetz bedingt durch Funktion'src='/FBFinal/css/images/pfeile/funktionGesetz.png'>";
                         }
                         else{ echo"";}
                     ?>
@@ -116,10 +116,10 @@ if(Yii::app()->user->level>=5){
                     <td>
                     <?php 
                         if($funktionsdaten['r_ausf_geschaeft'] == 'gesetzFunktion'){
-                            echo "<img title='Funktion bedingt durch Gesetz' src='/Finanzberatung/css/images/pfeile/gesetzFunktion.png'>";
+                            echo "<img title='Funktion bedingt durch Gesetz' src='/FBFinal/css/images/pfeile/gesetzFunktion.png'>";
                         }
                         elseif($funktionsdaten['r_ausf_geschaeft'] == 'funktionGesetz'){
-                            echo "<img title='Gesetz bedingt durch Funktion'src='/Finanzberatung/css/images/pfeile/funktionGesetz.png'>";
+                            echo "<img title='Gesetz bedingt durch Funktion'src='/FBFinal/css/images/pfeile/funktionGesetz.png'>";
                         }
                         else{ echo"";}
                     ?>
@@ -309,10 +309,10 @@ if(Yii::app()->user->level>=5){
                     <td style="background-color: #ffff00;">  </td>
                     <?php }
                     elseif($funktionsdaten['hsr_aktuell'] == 'gelbHoch'){ 
-                    echo "<td> <img src='/Finanzberatung/css/images/pfeile/gelbHoch.png'></td>";
+                    echo "<td> <img src='/FBFinal/css/images/pfeile/gelbHoch.png'></td>";
                     }
                     elseif($funktionsdaten['hsr_aktuell'] == 'gelbRunter'){ 
-                    echo "<td > <img style='transform: rotate(180deg);' src='/Finanzberatung/css/images/pfeile/gelbHoch.png'></td>";
+                    echo "<td > <img style='transform: rotate(180deg);' src='/FBFinal/css/images/pfeile/gelbHoch.png'></td>";
                     }
                     elseif($funktionsdaten['hsr_aktuell'] == 'rot') { ?>
                     <td style="background-color: #009000;">  </td>
@@ -327,10 +327,10 @@ if(Yii::app()->user->level>=5){
                     <td style="background-color: #ffff00;">  </td>
                     <?php }
                     elseif($funktionsdaten['hsr_zukuenftig'] == 'gelbHoch'){ 
-                    echo "<td> <img src='/Finanzberatung/css/images/pfeile/gelbHoch.png'></td>"; 
+                    echo "<td> <img src='/FBFinal/css/images/pfeile/gelbHoch.png'></td>"; 
                     }
                     elseif($funktionsdaten['hsr_zukuenftig'] == 'gelbRunter'){ 
-                    echo "<td > <img style='transform: rotate(180deg);' src='/Finanzberatung/css/images/pfeile/gelbHoch.png'></td>";
+                    echo "<td > <img style='transform: rotate(180deg);' src='/FBFinal/css/images/pfeile/gelbHoch.png'></td>";
                     }
                     elseif($funktionsdaten['hsr_zukuenftig'] == 'rot') { ?>
                     <td style="background-color: #009000;">  </td>

@@ -336,28 +336,7 @@ if(Yii::app()->user->level>=5){
                                 
                 </div>                
 		</form>
-		
-	
-		<?php /* $form = $this->beginWidget('CActiveForm', array(
-			'id'=>'neu-form',
-			'enableClientValidation'=>true,
-			'clientOptions'=>array(
-			'validateOnSubmit'=>true,
-                        ),
-                )); */?>
 
-		<?php // echo $form->errorSummary($model2[0]["filter"]); ?>
-
-	<!--	<div class="row">
-			<?php //echo "Grobphasen: ".$form->dropDownList($model2[0]["filter"],'grobphase_id',$model2[1]["grobphase"],array('separator'=>'','template'=>'<li style="display:inline; padding-left:10px;">{label}{input}</li>',)); 
-                        ?>
-		</div>
-		
-		<div class="row buttons">
-		<?php //echo CHtml::submitButton('Submit'); ?>
-		</div> -->
-
-		<?php //$this->endWidget(); ?>
 	</div>
 </div>
 <!-- ENDE --------------------------------------------------------------------->   
@@ -735,7 +714,7 @@ if(Yii::app()->user->level>=5){
      //Funktion, um zur Detailansicht zu springen
      function openDetail(fktNr){
         
-        var link = 'http://localhost/Finanzberatung/index.php?r=site/details&fktNr='+fktNr;
+        var link = 'http://localhost/FBFinal/index.php?r=site/details&fktNr='+fktNr;
         
         //Testen auf IE
         if(-[1,]){
