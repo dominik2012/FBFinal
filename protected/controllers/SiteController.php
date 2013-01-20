@@ -137,10 +137,7 @@ class SiteController extends Controller
 			$funktionGes = Funktion::model()->findAllBySql("SELECT * FROM funktion");
 		}
 		else{
-                        //angezeigte Tabelle
-			$funktionGes = Funktion2::model()->findAllBySql("SELECT * FROM funktion");
-                        //um Sprünge-ID zu bekommen
-                        //$funktionAlle = Funktion::model()->findAllBySql("SELECT * FROM funktion");
+			$funktionGes = Funktion2::model()->findAllBySql("SELECT * FROM funktion2");
 		}
                     
                 //Funktion für Buttons (Popup)
@@ -158,9 +155,17 @@ class SiteController extends Controller
                             $fktNrLength = count($fktNummern);
                         
                             for($j=0; $j<$fktNrLength; $j++){
-                                $fktID = Funktion::model()->findAllbySql("SELECT id FROM funktion WHERE nummer = $fktNummern[$j]");
-                                $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
-                                $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
+                                
+                                if(Yii::app()->user->level>5){
+                                    $fktID = Funktion::model()->findAllbySql("SELECT id FROM funktion WHERE funktion.nummer = $fktNummern[$j]");
+                                    $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
+                                    $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
+                                }else{
+                                    $fktID = Funktion2::model()->findAllbySql("SELECT id FROM funktion2 WHERE funktion2.nummer = $fktNummern[$j]");
+                                    $fktNr = $funktionGes[2]["nummer"];
+                                    $fktName = $funktionGes[2]["name"];
+                                }
+                                
                                 $temp = '['.$fktNr.']  '.$fktName.',,';
                                 
                                 //letzten 2 Kommas entfernen
@@ -180,6 +185,7 @@ class SiteController extends Controller
                         $sprungstellenArr[$i] = null;
                       }
                       
+                      //reset
                       $temp = null;
                       $ausgabeGesamt = null;
                       
@@ -189,9 +195,17 @@ class SiteController extends Controller
                         $fktNrLength = count($fktNummern);
                         
                         for($j=0; $j<$fktNrLength; $j++){
-                                $fktID = Funktion::model()->findAllbySql("SELECT id FROM funktion WHERE nummer = $fktNummern[$j]");
-                                $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
-                                $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
+                            
+                                if(Yii::app()->user->level>5){
+                                    $fktID = Funktion::model()->findAllbySql("SELECT id FROM funktion WHERE funktion.nummer = $fktNummern[$j]");
+                                    $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
+                                    $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
+                                }else{
+                                    $fktID = Funktion2::model()->findAllbySql("SELECT id FROM funktion2 WHERE funktion2.nummer = $fktNummern[$j]");
+                                    $fktNr = $funktionGes[$fktID[0]["id"]]["nummer"];
+                                    $fktName = $funktionGes[$fktID[0]["id"]]["name"];
+                                }
+
                                 $temp = '['.$fktNr.']  '.$fktName.',,';
                                 
                                 //letzten 2 Kommas entfernen
