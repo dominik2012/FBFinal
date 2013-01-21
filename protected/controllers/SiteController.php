@@ -138,6 +138,7 @@ class SiteController extends Controller
 		}
 		else{
 			$funktionGes = Funktion2::model()->findAllBySql("SELECT * FROM funktion2");
+                        $funktionAll = Funktion::model()->findAllBySql("SELECT * FROM funktion");
 		}
                     
 		//Aufruf der get-Methoden der jeweiligen Models
@@ -355,7 +356,7 @@ class SiteController extends Controller
                         if($sprungstellen != null){
                             $fktNummern = explode(",", $sprungstellen);
                             $fktNrLength = count($fktNummern);
-                        
+
                             for($j=0; $j<$fktNrLength; $j++){
                                 
                                 if(Yii::app()->user->level>5){
@@ -363,9 +364,9 @@ class SiteController extends Controller
                                     $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
                                     $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
                                 }else{
-                                    $fktID = Funktion2::model()->findAllbySql("SELECT id FROM funktion2 WHERE funktion2.nummer = $fktNummern[$j]");
-                                    $fktNr = $funktionGes[0]["nummer"];//fehler
-                                    $fktName = $funktionGes[0]["name"];
+                                    $fktID = Funktion::model()->findAllbySql("SELECT id FROM funktion WHERE funktion.nummer = $fktNummern[$j]");
+                                    $fktNr = $funktionAll[$fktID[0]["id"]-1]["nummer"];
+                                    $fktName = $funktionAll[$fktID[0]["id"]-1]["name"];
                                 }
                                 
                                 $temp = '['.$fktNr.']  '.$fktName.',,';
@@ -375,7 +376,8 @@ class SiteController extends Controller
                                     $length = strlen($temp);
                                     $temp = $temp.substr(0, $length-2);
                                 }
-
+                                
+                                //Aufbau des Strings pro Funktion
                                 if($ausgabeGesamt == null){
                                     $ausgabeGesamt = $temp;
                                 }else{
@@ -403,9 +405,9 @@ class SiteController extends Controller
                                     $fktNr = $funktionGes[$fktID[0]["id"]-1]["nummer"];
                                     $fktName = $funktionGes[$fktID[0]["id"]-1]["name"];
                                 }else{
-                                    $fktID = Funktion2::model()->findAllbySql("SELECT id FROM funktion2 WHERE funktion2.nummer = $fktNummern[$j]");
-                                    $fktNr = $funktionGes[$fktID[0]["id"]]["nummer"];
-                                    $fktName = $funktionGes[$fktID[0]["id"]]["name"];
+                                    $fktID = Funktion2::model()->findAllbySql("SELECT id FROM funktion WHERE funktion.nummer = $fktNummern[$j]");
+                                    $fktNr = $funktionAll[$fktID[0]["id"]-1]["nummer"];
+                                    $fktName = $funktionAll[$fktID[0]["id"]-1]["name"];
                                 }
 
                                 $temp = '['.$fktNr.']  '.$fktName.',,';
