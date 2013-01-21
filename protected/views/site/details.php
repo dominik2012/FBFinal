@@ -15,7 +15,6 @@ if(Yii::app()->user->level>=5){
 <?php   
     $fktNr = (int)($fktNr);
     $link = "http://localhost/FBFinal/index.php?r=site/details&fktNr=";
-    //$sprung = $sprung;
     $pFkt = $prevFkt;
     $nFkt = $nextFkt;
     $pPhase = $prevPhase;
@@ -258,7 +257,6 @@ if(Yii::app()->user->level>=5){
                         $funktionsName = $funktion[$ausgabe[$i]]["name"];
                     
                         echo '<a class="links" href="'.$link.$funktionsNr.'">['.$funktionsNr.'] '.$funktionsName.'</a></br></br>';
-                        //echo '['.$funktionsNr.'] '.$funktionsName.'</br></br>';
                     }
                 } 
             ?>
@@ -278,7 +276,6 @@ if(Yii::app()->user->level>=5){
                         $funktionsName = $funktion[$ausgabe[$i]]["name"];
                     
                         echo '<a class="links" href="'.$link.$funktionsNr.'">['.$funktionsNr.'] '.$funktionsName.'</a></br></br>';
-                        //echo '['.$funktionsNr.'] '.$funktionsName.'</br></br>';
                     }
                 } 
             ?>

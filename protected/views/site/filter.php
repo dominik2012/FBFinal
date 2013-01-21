@@ -108,7 +108,7 @@ if(Yii::app()->user->level>=5){
 				<select name="select_gesetze" id="select_gesetze" data-placeholder="Gesetze-Filter" style="width:465px;" multiple="multiple">
 				<?php
 				for($i=0;$i<count($model2[1]["gesetze"]);$i++){
-					echo '<option value="'.$i.'" id="gesetze'.$i.'" name="gesetze'.$i.'" >'.$model2[1]["gesetze"][$i]["gesetz"].'</option>';
+					echo '<option value="'.($i+1).'" id="gesetze'.$i.'" name="gesetze'.$i.'" >'.$model2[1]["gesetze"][$i]["gesetz"].'</option>';
 					}
 					?>
 				</select><br>
@@ -462,7 +462,9 @@ if(Yii::app()->user->level>=5){
 									
                                     if(!empty($model4)){ 
                                         $temp = null;
-                                        $temp = explode(",",$model4);
+                                        $model4= str_replace("'", "", $model4);
+										$temp = explode(",",$model4);
+										
                                         $model4 = null;
                                         for($i=0;$i<count($temp);$i++){
                                             $temp[$i]= '['.$grobphase[$temp[$i]]["grobphase_id"].'] '.$grobphase[$temp[$i]]["name"];
@@ -496,7 +498,7 @@ if(Yii::app()->user->level>=5){
                                         $fil_gesetze = null;
                                         for($i=0;$i<count($temp);$i++){
                                             $temp[$i]= str_replace("'", "", $temp[$i]);
-                                            $temp[$i]= '['.$gesetz2[$temp[$i]]["id"].'] '.$gesetz2[$temp[$i]]["gesetz"];
+                                            $temp[$i]= '['.$gesetz2[$temp[$i]-1]["id"].'] '.$gesetz2[$temp[$i]-1]["gesetz"];
                                             if($i==count($temp)-1){
                                                 $fil_gesetze .= $temp[$i];
                                             }else{
@@ -505,7 +507,7 @@ if(Yii::app()->user->level>=5){
                                         }
                                         echo '<div class="filterlist_inner"><p style="color: #0075B8;">GESETZ: '.$fil_gesetze.'</p></div>';
                                     }
-
+									
                                     if(!empty($privmb)){
                                         $privmb = str_replace("'gesetzFunktion'", " Gesetz -> Funktion", $privmb);
                                         $privmb = str_replace("'keine Abhängig'", " Keine Abh&auml;ngigkeit", $privmb);
@@ -1123,11 +1125,11 @@ if(Yii::app()->user->level>=5){
 			for (var i=0; i<len; i++)
 			{
 				if (document.neu_form.select_grobphase.options[i].selected && j==0){
-                                    bufferGrobphase = bufferGrobphase +document.neu_form.select_grobphase.options[i].value;
-                                    j++;
+                                    bufferGrobphase = bufferGrobphase + "'" + document.neu_form.select_grobphase.options[i].value + "'";
+									j++;
 				}
                                 else if (document.neu_form.select_grobphase.options[i].selected && j!=0){
-                                    bufferGrobphase = bufferGrobphase +","+document.neu_form.select_grobphase.options[i].value;
+                                    bufferGrobphase = bufferGrobphase +"," +"'" + document.neu_form.select_grobphase.options[i].value + "'";
 				}
 			}
 			j=0;

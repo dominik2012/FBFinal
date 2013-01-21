@@ -251,14 +251,14 @@ class SiteController extends Controller
 				}
 			}
 			if(!empty($fil_gesetze)){
-                            $fil[$index] = "gesetz.id IN ($fil_gesetze)";
-                            $index++;
-                            if(Yii::app()->user->level>5){
-				$sql ="SELECT * FROM funktion INNER JOIN nm_funktion_gesetz ON funktion.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE ";
-                            }
-                            else{
-				$sql ="SELECT * FROM funktion2 INNER JOIN nm_funktion_gesetz ON funktion2.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE ";
-                            }
+                                $fil[$index] = "gesetz.id IN ($fil_gesetze)";
+                                $index++;
+                                if(Yii::app()->user->level>5){
+                                    $sql ="SELECT * FROM funktion INNER JOIN nm_funktion_gesetz ON funktion.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE ";
+                                }
+                                else{
+                                    $sql ="SELECT * FROM funktion2 INNER JOIN nm_funktion_gesetz ON funktion2.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE ";
+                                }
 			}
                         
 			//Zusammensetzen der SQL-Abfrage
