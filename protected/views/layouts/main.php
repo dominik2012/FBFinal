@@ -38,7 +38,7 @@
                                 ),
 				array(  'label'=>'Benutzerverwaltung', 
                                         'url'=>array('/userGroups/admin'), 
-                                        'visible'=>Yii::app()->user->level>99,
+                                        'visible'=>Yii::app()->user->level>2000,
                                 ),/*
                                 array(  'label'=>'Übersicht', 
                                         'url'=>array('/userGroups/user/view'), 

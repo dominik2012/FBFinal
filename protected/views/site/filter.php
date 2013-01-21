@@ -592,6 +592,7 @@ if(Yii::app()->user->level>=5){
             
             $fktGesetze ="";
             
+            //Gesetze pro Funktion
             for($k=0;$k<count($gesetze[$i]);$k++){	
                 $fktGesetze .=($k+1).'. '.$gesetze[$i][$k]["gesetz"].'<br/>';
             }

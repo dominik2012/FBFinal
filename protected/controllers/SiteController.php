@@ -250,15 +250,16 @@ class SiteController extends Controller
 				}
 			}
 			if(!empty($fil_gesetze)){
-			$fil[$index] = "gesetz.id IN ($fil_gesetze)";
-			$index++;
-			if(Yii::app()->user->level>5){
+                            $fil[$index] = "gesetz.id IN ($fil_gesetze)";
+                            $index++;
+                            if(Yii::app()->user->level>5){
 				$sql ="SELECT * FROM funktion INNER JOIN nm_funktion_gesetz ON funktion.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE ";
-			}
-			else{
+                            }
+                            else{
 				$sql ="SELECT * FROM funktion2 INNER JOIN nm_funktion_gesetz ON funktion2.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE ";
+                            }
 			}
-			}
+                        
 			//Zusammensetzen der SQL-Abfrage
 			for($i=0;$i<count($fil);$i++){
 				$sql .=$fil[$i]." AND ";
@@ -275,7 +276,7 @@ class SiteController extends Controller
 				//Zuweisung von "leer", wenn keine Funktion die Kriterien erf�llt, wird in neu.php abgefragt.
 				if(empty($funktion[0]["id"])){
 					$funktion[0]["id"]="leer";
-					}
+				}
 					
 		}
 		else{
@@ -300,19 +301,19 @@ class SiteController extends Controller
 		}
 			
 				if($funktion[0]["id"]!="leer"){
-				$gesetze = array();
-				for($i=0;$i<count($funktion);$i++){
-					$gesetze[$i]=$funktion[$i]->gesetze;
-					}
-				$business_rules = array();
-				for($i=0;$i<count($funktion);$i++){
-					$business_rules[$i]=$funktion[$i]->business_rules;
-					$br_buffer ="";
-					for($j=0;$j<count($business_rules[$i]);$j++){
-						$br_buffer  .= ($j+1).". ".$business_rules[$i][$j]["name"].'<br/>';
-						}
-					$funktion[$i]["b_name"]= $br_buffer;
-					}
+                                    $gesetze = array();
+                                    for($i=0;$i<count($funktion);$i++){
+                                        $gesetze[$i]=$funktion[$i]->gesetze;
+                                    }
+                                    $business_rules = array();
+                                    for($i=0;$i<count($funktion);$i++){
+                                            $business_rules[$i]=$funktion[$i]->business_rules;
+                                            $br_buffer ="";
+                                            for($j=0;$j<count($business_rules[$i]);$j++){
+                                                $br_buffer  .= ($j+1).". ".$business_rules[$i][$j]["name"].'<br/>';
+                                            }
+                                            $funktion[$i]["b_name"]= $br_buffer;
+                                    }
 				}
 				
 				if(!empty($gesetze)){
@@ -341,7 +342,7 @@ class SiteController extends Controller
 					}
 				}
 				
-                //Funktion für Buttons (Popup)
+                //Funktion für Buttons und Popup
                 $anzFunktionen = count($funktion);
                 
                 for($i=0;$i<$anzFunktionen;$i++){
@@ -426,7 +427,7 @@ class SiteController extends Controller
                         $funktionsfolgenArr[$i] = null;
                       }
                 }
-                                
+                        //Render        
 			if($funktion[0]["id"]!="leer"){
 				$this->render('filter',array( 'gesetz2' => $gesetz2, 'funktionsfolgenArr' => $funktionsfolgenArr,'sprungstellenArr' => $sprungstellenArr, 'gesetze'=>$gesetze,'unterphase2'=>$unterphase2,'fil'=>$sql,'model'=>$funktion, 'model2' =>$model2, 'model3' =>$funktion, 'model4' => $fil_grobphase, 'name' => $fil_name, 'hsrz' => $fil_hsrz, 'hsra' => $fil_hsra, 'privob' => $fil_privob, 'profob' => $fil_profob, 'rausfg' => $fil_rausfg,'unterphase' => $fil_unterphase, 'privmb' => $fil_privmb, 'profmb' => $fil_profmb, 'fil_gesetze' => $fil_gesetze, 'model6' => $spaltennamen, 'model5' => $spaltennamen2, 'grobphase' => $grobphase,));
 			}
