@@ -154,7 +154,7 @@ if(Yii::app()->user->level>=5){
         Beschreibung Gesetze
     </div>
     <div class="row">
-    <div class="auslegung">
+    <div class="auslegung2">
         <div class="topline">Auslegung</div>
         <div class="inhaltBR"><?php 
 		if(!empty($auslegungenGesetz) && !empty($auslegungenGesetz[0][0]["name"])){

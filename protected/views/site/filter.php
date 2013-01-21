@@ -386,7 +386,7 @@ if(Yii::app()->user->level>=5){
                             echo '<option value="'.$model5[45].'" id="'.$model5[45].'" name="'.$model5[45].'" title="'.$title_br.'");>'.$inhalt_br.'</option>';
                             
                             
-							//Auslegung
+                            //Auslegung
                             $inhalt_auslegung = $model6[46];
                             $title_auslegung = str_replace('"',"&#039;",  shortName($inhalt_auslegung));
                             echo '<option value="'.$model5[46].'" id="'.$model5[46].'" name="'.$model5[46].'" title="'.$title_auslegung.'");>'.$inhalt_auslegung.'</option>';
@@ -658,8 +658,7 @@ if(Yii::app()->user->level>=5){
                             }else if($spaInhalt == "funktionGesetz"){
                                 $spaInhalt = "<img title='Gesetz bedingt durch Funktion'src='/FBFinal/css/images/pfeile/funktionGesetz.png' style='padding-top: 70px;'>";
                                 $style = $style1;
-                            }else if($spaInhalt == "keine Abhängig"){
-                               //if($spaName == "Privat mit Beratung" || $spaName == "Privat ohne Beratung" || $spaName == "Professionell mit Beratung" || $spaName == "Professionell ohne Beratung" || $spaName == "Reines Ausfuehrungsgeschäft")
+                            }else if($spaInhalt == "keine Abhängig"){                              
                                 $spaInhalt = "<img title='Keine Regularien' src='/FBFinal/css/images/pfeile/null.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaInhalt == "gelb"){
