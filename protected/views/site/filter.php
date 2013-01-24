@@ -36,15 +36,15 @@ if(Yii::app()->user->level>=5){
     <meta charset="utf-8">
     <title>Funktionsfilter</title>
     
-    <link rel="stylesheet" href="/FBFinal/jquery-multi/css/jquery-ui-1.8.9.custom/jquery-ui-1.8.9.custom.css">
-    <link rel="stylesheet" href="/FBFinal/multiselect/jquery.multiselect.css">
-    <script src="/FBFinal/jquery-ui/js/jquery-1.8.2.js"></script>
-    <script src="/FBFinal/jquery-ui/js/jquery-ui-1.9.0.custom.js"></script>
-    <script src="/FBFinal/jquery-multi/jquery.multi-accordion-1.5.3.js"></script>
-    <script src="/FBFinal/multiselect/src/jquery.multiselect.js"></script>
+    <link rel="stylesheet" href="jquery-multi/css/jquery-ui-1.8.9.custom/jquery-ui-1.8.9.custom.css">
+    <link rel="stylesheet" href="multiselect/jquery.multiselect.css">
+    <script src="jquery-ui/js/jquery-1.8.2.js"></script>
+    <script src="jquery-ui/js/jquery-ui-1.9.0.custom.js"></script>
+    <script src="jquery-multi/jquery.multi-accordion-1.5.3.js"></script>
+    <script src="multiselect/src/jquery.multiselect.js"></script>
     
-    <link rel="stylesheet" href="/FBFinal/chosen-master/chosen/chosen.css">
-    <script src="/FBFinal/chosen-master/chosen/chosen.jquery.js"></script>
+    <link rel="stylesheet" href="chosen-master/chosen/chosen.css">
+    <script src="chosen-master/chosen/chosen.jquery.js"></script>
     
     <script type="text/javascript">
     //VIEWFILTER
@@ -66,7 +66,7 @@ if(Yii::app()->user->level>=5){
 
     <div class="form">
 	
-		<form name="neu_form" id="neu_form" action="/FBFinal/index.php?r=site/filter" method="POST">
+		<form name="neu_form" id="neu_form" action="index.php?r=site/filter" method="POST">
                 <div style="float:left;">
                 <div class="allgemein">
                 <div id="functionoverview">Allgemein</div>
@@ -91,9 +91,9 @@ if(Yii::app()->user->level>=5){
 		Unterphase:<br> 
                 <select name="select_unterphase" id="select_unterphase" data-placeholder="Unterphase-Filter" style="width:465px;" multiple="multiple">
                 <?php
-			for ($i=0;$i<count($model2[1]["unterphase"]);$i++){
+			for ($i=1;$i<count($model2[1]["unterphase"]);$i++){
                            
-                                $nummer = $i+1;
+                                $nummer = $i;
                                 $inhalt = $model2[1]["unterphase"][$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
                                 
@@ -368,8 +368,8 @@ if(Yii::app()->user->level>=5){
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
                                 echo '<option value="'.$model5[$i].'" id="'.$model5[$i].'" name="'.$model5[$i].'" title="'.$title.'");>'.$inhalt.'</option>';
                             }
-							// Reines Ausfuehrungsgeschaeft
-							echo '<option value="'.$model5[12].'" id="'.$model5[12].'" name="'.$model5[12].'" title="'.$model6[12].'");>'.$model6[12].'</option>';
+                            // Reines Ausfuehrungsgeschaeft
+                            echo '<option value="'.$model5[12].'" id="'.$model5[12].'" name="'.$model5[12].'" title="'.$model6[12].'");>'.$model6[12].'</option>';
                             echo '</optgroup>';
                             
                             //Gesetz
@@ -656,23 +656,22 @@ if(Yii::app()->user->level>=5){
                             //Grafik Abfragen
                             if($j<45){
                             if($spaInhalt == "gesetzFunktion"){
-                                $spaInhalt = "<img title='Funktion bedingt durch Gesetz' src='/FBFinal/css/images/pfeile/gesetzFunktion.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Funktion bedingt durch Gesetz' src='css/images/pfeile/gesetzFunktion.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaInhalt == "funktionGesetz"){
-                                $spaInhalt = "<img title='Gesetz bedingt durch Funktion'src='/FBFinal/css/images/pfeile/funktionGesetz.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Gesetz bedingt durch Funktion'src='css/images/pfeile/funktionGesetz.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaInhalt == "keine Abhängig"){                              
-                                $spaInhalt = "<img title='Keine Regularien' src='/FBFinal/css/images/pfeile/null.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Keine Regularien' src='css/images/pfeile/null.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaInhalt == "gelb"){
-                                $spaInhalt = "<img title='Geringer Handlungsspielraum' src='/FBFinal/css/images/pfeile/gelb.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Geringer Handlungsspielraum' src='css/images/pfeile/gelb.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaInhalt == "gruen"){
-                                $spaInhalt = "<img title='Normaler Handlungsspielraum' src='/FBFinal/css/images/pfeile/gruen.png' style='padding-top: 70px;'>";
+                                $spaInhalt = "<img title='Normaler Handlungsspielraum' src='css/images/pfeile/gruen.png' style='padding-top: 70px;'>";
                                 $style = $style1;
-                            }
-                            else if($spaInhalt == "gelbHoch"){
-                                $spaInhalt = "<img title='Handlungsspielraum zukünftig weiter eingeschränkt' src='/FBFinal/css/images/pfeile/gelbHoch.png' style='padding-top: 70px;'>";
+                            }else if($spaInhalt == "gelbHoch"){
+                                $spaInhalt = "<img title='Handlungsspielraum zukünftig weiter eingeschränkt' src='css/images/pfeile/gelbHoch.png' style='padding-top: 70px;'>";
                                 $style = $style1;
                             }else if($spaName == "Filiale Minimum Dauer" || $spaName == "Filiale Empfehlung Dauer" || $spaName == "Online Minimum Dauer" || $spaName == "Online Empfehlung Dauer" || $spaName == "Mobil Minimum Dauer" || $spaName == "Mobil Empfehlung Dauer"){
                                 $spaInhalt .= ' min';
@@ -716,7 +715,7 @@ if(Yii::app()->user->level>=5){
      //Funktion, um zur Detailansicht zu springen
      function openDetail(fktNr){
         
-        var link = 'http://localhost/FBFinal/index.php?r=site/details&fktNr='+fktNr;
+        var link = 'index.php?r=site/details&fktNr='+fktNr;
         
         //Testen auf IE
         if(-[1,]){
@@ -746,8 +745,7 @@ if(Yii::app()->user->level>=5){
     $('.gesetz_button').click(
 
             function popUp(){
-                
-                //if(getElementByID('popup_' + popupID)){
+
                 var fktName = this.attributes["name"].value;
                 var gesetze = this.attributes["data-gesetze"].value;
                 var popupID = this.id;
@@ -917,10 +915,10 @@ if(Yii::app()->user->level>=5){
          return checkbox.value;
 		}).join(", ");
 		var val = values.split(", ");
-		//dump(val);
+
 		for(var i=0;i<val.length;i++){
 			val[i]= '.'+val[i];
-			//alert(val[i]);
+
 			if($(val[i]).is(':visible')){
 				$(val[i]).css('display','none');
 			}

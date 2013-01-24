@@ -54,7 +54,7 @@
 }
 
 .submit {
-    background: url('/Finanzberatung/css/images/submit/submit1.png');
+    background: url('../css/images/submit/submit1.png');
     height: 50px;
     width: 50px;
     border: none;
@@ -62,15 +62,15 @@
 }
 
 .submit:hover {
-    background: url('/Finanzberatung/css/images/submit/submit2.png');
+    background: url('../css/images/submit/submit2.png');
 }
 
 .submit:active {
-    background: url('/Finanzberatung/css/images/submit/submit3.png');
+    background: url('../css/images/submit/submit3.png');
 }
 
 .detail_button {
-        background: url('/Finanzberatung/css/images/detail/details1.png');
+        background: url('../css/images/detail/details1.png');
         float: left;
         position: absolute;
         height: 20px;
@@ -81,15 +81,15 @@
 }
 
 .detail_button:hover {
-        background: url('/Finanzberatung/css/images/detail/details2.png');
+        background: url('../css/images/detail/details2.png');
 }
 
 .detail_button:active {
-        background: url('/Finanzberatung/css/images/detail/details3.png');
+        background: url('../css/images/detail/details3.png');
 }
 
 .gesetz_button {
-        background: url('/Finanzberatung/css/images/gesetz/gesetz1.png');
+        background: url('../css/images/gesetz/gesetz1.png');
         float: left;
         position: absolute;
         height: 20px;
@@ -100,15 +100,15 @@
 }
 
 .gesetz_button:hover {
-        background: url('/Finanzberatung/css/images/gesetz/gesetz2.png');
+        background: url('../css/images/gesetz/gesetz2.png');
 }
 
 .gesetz_button:active {
-        background: url('/Finanzberatung/css/images/gesetz/gesetz3.png');
+        background: url('../css/images/gesetz/gesetz3.png');
 }
 
 .gesetz_button_null {
-        background: url('/Finanzberatung/css/images/gesetz/gesetz4.png');
+        background: url('../css/images/gesetz/gesetz4.png');
         float: left;
         position: absolute;
         height: 20px;
@@ -120,7 +120,7 @@
 
 
 .spruenge_button {
-        background: url('/Finanzberatung/css/images/sprung/sprung1.png');
+        background: url('../css/images/sprung/sprung1.png');
         float: left;
         position: absolute;
         height: 20px;
@@ -131,15 +131,15 @@
 }
 
 .spruenge_button:hover {
-        background: url('/Finanzberatung/css/images/sprung/sprung2.png');
+        background: url('../css/images/sprung/sprung2.png');
 }
 
 .spruenge_button:active {
-        background: url('/Finanzberatung/css/images/sprung/sprung3.png');
+        background: url('../css/images/sprung/sprung3.png');
 }
 
 .spruenge_button_null {
-        background: url('/Finanzberatung/css/images/sprung/sprung4.png');
+        background: url('../css/images/sprung/sprung4.png');
         float: left;
         position: absolute;
         height: 20px;
@@ -150,7 +150,7 @@
 }
 
 .folge_button {
-        background: url('/Finanzberatung/css/images/fkt/fkt1.png');
+        background: url('../css/images/fkt/fkt1.png');
         float: left;
         position: absolute;
         height: 20px;
@@ -161,15 +161,15 @@
 }
 
 .folge_button:hover {
-        background: url('/Finanzberatung/css/images/fkt/fkt2.png');
+        background: url('../css/images/fkt/fkt2.png');
 }
 
 .folge_button:active {
-        background: url('/Finanzberatung/css/images/fkt/fkt3.png');
+        background: url('../css/images/fkt/fkt3.png');
 }
 
 .folge_button_null {
-        background: url('/Finanzberatung/css/images/fkt/fkt4.png');
+        background: url('../css/images/fkt/fkt4.png');
         float: left;
         position: absolute;
         height: 20px;
@@ -182,14 +182,14 @@
 .info_button {
     height: 21px;
     width: 21px;
-    background: url('/Finanzberatung/css/images/info/info.png');
+    background: url('../css/images/info/info.png');
     position: absolute;
     top: 7px;
     right: 5px;
 }
 
 .kanal_button {
-        background: url('/Finanzberatung/css/images/kanal/kanal1.png');
+        background: url('../css/images/kanal/kanal1.png');
         float: left;
         position: absolute;
         height: 20px;
@@ -200,15 +200,15 @@
 }
 
 .kanal_button:hover {
-        background: url('/Finanzberatung/css/images/kanal/kanal2.png');
+        background: url('../css/images/kanal/kanal2.png');
 }
 
 .kanal_button:active {
-        background: url('/Finanzberatung/css/images/kanal/kanal3.png');
+        background: url('../css/images/kanal/kanal3.png');
 }
 
 .kanal_button_null {
-        background: url('/Finanzberatung/css/images/kanal/kanal4.png');
+        background: url('../css/images/kanal/kanal4.png');
         float: left;
         position: absolute;
         height: 20px;

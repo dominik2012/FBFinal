@@ -345,10 +345,15 @@ class SiteController extends Controller
 				
                 //Funktion für Buttons und Popup
                 $anzFunktionen = count($funktion);
-                
+
                 for($i=0;$i<$anzFunktionen;$i++){
+                    if(isset($funktion[$i]["sprungstelle"]) || isset($funktion[$i]["funktionsfolge"])){
                         $sprungstellen = $funktion[$i]["sprungstelle"];
                         $funktionsfolgen = $funktion[$i]["funktionsfolge"];
+                    }else{
+                        $sprungstellen = null;
+                        $funktionsfolgen = null;
+                    }
                         $temp = null;
                         $ausgabeGesamt = null;
                         
