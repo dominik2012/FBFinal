@@ -1547,3 +1547,83 @@ Stack trace:
 REQUEST_URI=/FBFinal/index.php?r=site/filter
 in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (359)
 in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/26 13:24:49 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous. The SQL statement executed was: SELECT * FROM funktion INNER JOIN nm_funktion_gesetz ON funktion.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE id IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64')) .
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (273)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/26 13:24:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous. The SQL statement executed was: SELECT * FROM funktion INNER JOIN nm_funktion_gesetz ON funktion.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE id IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64')) ' in C:\xampp\htdocs\FBFinal\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\FBFinal\framework\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php(273): CActiveRecord->findAllBySql('SELECT * FROM f...')
+#3 C:\xampp\htdocs\FBFinal\framework\web\actions\CInlineAction.php(50): SiteController->actionFilter()
+#4 C:\xampp\htdocs\FBFinal\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('filter')
+#8 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/filter')
+#9 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+HTTP_REFERER=http://localhost/FBFinal/index.php?r=site/filter
+---
+2013/01/26 13:25:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous. The SQL statement executed was: SELECT * FROM funktion INNER JOIN nm_funktion_gesetz ON funktion.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE grobphase_id IN ('1','2','3') AND id IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64')) .
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (273)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/26 13:25:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous. The SQL statement executed was: SELECT * FROM funktion INNER JOIN nm_funktion_gesetz ON funktion.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE grobphase_id IN ('1','2','3') AND id IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64')) ' in C:\xampp\htdocs\FBFinal\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\FBFinal\framework\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php(273): CActiveRecord->findAllBySql('SELECT * FROM f...')
+#3 C:\xampp\htdocs\FBFinal\framework\web\actions\CInlineAction.php(50): SiteController->actionFilter()
+#4 C:\xampp\htdocs\FBFinal\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('filter')
+#8 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/filter')
+#9 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+HTTP_REFERER=http://localhost/FBFinal/index.php?r=site/filter
+---
+2013/01/26 13:28:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous. The SQL statement executed was: SELECT * FROM funktion INNER JOIN nm_funktion_gesetz ON funktion.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE id IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64')) .
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (272)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/26 13:28:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in IN/ALL/ANY subquery is ambiguous. The SQL statement executed was: SELECT * FROM funktion INNER JOIN nm_funktion_gesetz ON funktion.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE id IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64')) ' in C:\xampp\htdocs\FBFinal\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\FBFinal\framework\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php(272): CActiveRecord->findAllBySql('SELECT * FROM f...')
+#3 C:\xampp\htdocs\FBFinal\framework\web\actions\CInlineAction.php(50): SiteController->actionFilter()
+#4 C:\xampp\htdocs\FBFinal\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('filter')
+#8 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/filter')
+#9 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+HTTP_REFERER=http://localhost/FBFinal/index.php?r=site/filter
+---
+2013/01/26 13:28:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN('1','2','3','4','5' at line 1. The SQL statement executed was: SELECT * FROM funktionid IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64')) .
+in C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php (268)
+in C:\xampp\htdocs\FBFinal\index.php (13)
+2013/01/26 13:28:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN('1','2','3','4','5' at line 1. The SQL statement executed was: SELECT * FROM funktionid IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64')) ' in C:\xampp\htdocs\FBFinal\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\FBFinal\framework\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\FBFinal\protected\controllers\SiteController.php(268): CActiveRecord->findAllBySql('SELECT * FROM f...')
+#3 C:\xampp\htdocs\FBFinal\framework\web\actions\CInlineAction.php(50): SiteController->actionFilter()
+#4 C:\xampp\htdocs\FBFinal\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\FBFinal\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('filter')
+#8 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/filter')
+#9 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/FBFinal/index.php?r=site/filter
+HTTP_REFERER=http://localhost/FBFinal/index.php?r=site/filter
+---

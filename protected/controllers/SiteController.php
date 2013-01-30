@@ -242,25 +242,21 @@ class SiteController extends Controller
 			else{
 				$sql ="SELECT * FROM funktion2 WHERE ";
 			}
-			if($fil[0] == ""){
+			
+			if(!empty($fil_gesetze)){
+                                
+								$fil[$index] = "id IN(SELECT DISTINCT f_id FROM nm_funktion_gesetz WHERE g_id IN($fil_gesetze))";
+                                $index++;
+                                
+			}
+             if($fil[0] == ""){
 				if(Yii::app()->user->level>5){
 					$sql ="SELECT * FROM funktion";
 				}
 				else{
 					$sql ="SELECT * FROM funktion2";
 				}
-			}
-			if(!empty($fil_gesetze)){
-                                $fil[$index] = "gesetz.id IN ($fil_gesetze)";
-                                $index++;
-                                if(Yii::app()->user->level>5){
-                                    $sql ="SELECT * FROM funktion INNER JOIN nm_funktion_gesetz ON funktion.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE ";
-                                }
-                                else{
-                                    $sql ="SELECT * FROM funktion2 INNER JOIN nm_funktion_gesetz ON funktion2.id = nm_funktion_gesetz.f_id INNER JOIN gesetz ON nm_funktion_gesetz.g_id = gesetz.id WHERE ";
-                                }
-			}
-                        
+			}           
 			//Zusammensetzen der SQL-Abfrage
 			for($i=0;$i<count($fil);$i++){
 				$sql .=$fil[$i]." AND ";
@@ -302,9 +298,13 @@ class SiteController extends Controller
 		}
 			
 				if($funktion[0]["id"]!="leer"){
+									$gesetze_buf ="";
                                     $gesetze = array();
                                     for($i=0;$i<count($funktion);$i++){
                                         $gesetze[$i]=$funktion[$i]->gesetze;
+										for($j=0;$j<count($gesetze[$i]);$j++){
+											$gesetze_buf .= $i."  ".$funktion[$i]["id"]." :  ".$gesetze[$i][$j]["gesetz"]."   |  ";
+										}
                                     }
                                     $business_rules = array();
                                     for($i=0;$i<count($funktion);$i++){
@@ -436,7 +436,7 @@ class SiteController extends Controller
                 }
                         //Render        
 			if($funktion[0]["id"]!="leer"){
-				$this->render('filter',array( 'gesetz2' => $gesetz2, 'funktionsfolgenArr' => $funktionsfolgenArr,'sprungstellenArr' => $sprungstellenArr, 'gesetze'=>$gesetze,'unterphase2'=>$unterphase2,'fil'=>$sql,'model'=>$funktion, 'model2' =>$model2, 'model3' =>$funktion, 'model4' => $fil_grobphase, 'name' => $fil_name, 'hsrz' => $fil_hsrz, 'hsra' => $fil_hsra, 'privob' => $fil_privob, 'profob' => $fil_profob, 'rausfg' => $fil_rausfg,'unterphase' => $fil_unterphase, 'privmb' => $fil_privmb, 'profmb' => $fil_profmb, 'fil_gesetze' => $fil_gesetze, 'model6' => $spaltennamen, 'model5' => $spaltennamen2, 'grobphase' => $grobphase,));
+				$this->render('filter',array( 'ges'=>$gesetze_buf,'gesetz2' => $gesetz2, 'funktionsfolgenArr' => $funktionsfolgenArr,'sprungstellenArr' => $sprungstellenArr, 'gesetze'=>$gesetze,'unterphase2'=>$unterphase2,'fil'=>$sql,'model'=>$funktion, 'model2' =>$model2, 'model3' =>$funktion, 'model4' => $fil_grobphase, 'name' => $fil_name, 'hsrz' => $fil_hsrz, 'hsra' => $fil_hsra, 'privob' => $fil_privob, 'profob' => $fil_profob, 'rausfg' => $fil_rausfg,'unterphase' => $fil_unterphase, 'privmb' => $fil_privmb, 'profmb' => $fil_profmb, 'fil_gesetze' => $fil_gesetze, 'model6' => $spaltennamen, 'model5' => $spaltennamen2, 'grobphase' => $grobphase,));
 			}
 			else{
 				$this->render('filter',array('model'=>$funktion, 'model2' =>$model2, 'model6' => $spaltennamen, 'model5' => $spaltennamen2, 'leer' => 'leer',));
