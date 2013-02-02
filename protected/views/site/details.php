@@ -6,15 +6,15 @@ if(Yii::app()->user->level>=5){
 <head>
     <meta charset="utf-8">
     <title>Detailansicht</title>
-    <link rel="stylesheet" href="jquery-multi/css/jquery-ui-1.8.9.custom/jquery-ui-1.8.9.custom.css">
-    <script src="jquery-ui/js/jquery-1.8.2.js"></script>
-    <script src="jquery-ui/js/jquery-ui-1.9.0.custom.js"></script>
+    <link rel="stylesheet" href="../jquery-multi/css/jquery-ui-1.8.9.custom/jquery-ui-1.8.9.custom.css">
+    <script src="../jquery-ui/js/jquery-1.8.2.js"></script>
+    <script src="../jquery-ui/js/jquery-ui-1.9.0.custom.js"></script>
     
 </head>
 <body>
 <?php   
     $fktNr = (int)($fktNr);
-    $link = "index.php?r=site/details&fktNr=";
+    $link = "details?fktNr=";
     $pFkt = $prevFkt;
     $nFkt = $nextFkt;
     $pPhase = $prevPhase;
@@ -71,10 +71,10 @@ if(Yii::app()->user->level>=5){
                     <td>
                     <?php 
                         if($funktionsdaten['priv_mit_beratung']== 'gesetzFunktion'){
-                            echo "<img title='Funktion bedingt durch Gesetz' src='css/images/pfeile/gesetzFunktion.png'>";
+                            echo "<img title='Funktion bedingt durch Gesetz' src='../css/images/pfeile/gesetzFunktion.png'>";
                         }
                         elseif($funktionsdaten['priv_mit_beratung'] == 'funktionGesetz'){
-                            echo "<img title='Gesetz bedingt durch Funktion'src='css/images/pfeile/funktionGesetz.png'>";
+                            echo "<img title='Gesetz bedingt durch Funktion'src='../css/images/pfeile/funktionGesetz.png'>";
                         }
                         else{ echo"";}
                     ?>
@@ -82,10 +82,10 @@ if(Yii::app()->user->level>=5){
                     <td>
                     <?php 
                         if($funktionsdaten['prof_mit_beratung'] == 'gesetzFunktion'){
-                            echo "<img title='Funktion bedingt durch Gesetz' src='css/images/pfeile/gesetzFunktion.png'>";
+                            echo "<img title='Funktion bedingt durch Gesetz' src='../css/images/pfeile/gesetzFunktion.png'>";
                         }
                         elseif($funktionsdaten['prof_mit_beratung'] == 'funktionGesetz'){
-                            echo "<img title='Gesetz bedingt durch Funktion'src='css/images/pfeile/funktionGesetz.png'>";
+                            echo "<img title='Gesetz bedingt durch Funktion'src='../css/images/pfeile/funktionGesetz.png'>";
                         }
                         else{ echo"";}
                     ?>                       
@@ -93,10 +93,10 @@ if(Yii::app()->user->level>=5){
                     <td>
                     <?php 
                         if($funktionsdaten['priv_ohne_beratung'] == 'gesetzFunktion'){
-                            echo "<img title='Funktion bedingt durch Gesetz' src='css/images/pfeile/gesetzFunktion.png'>";
+                            echo "<img title='Funktion bedingt durch Gesetz' src='../css/images/pfeile/gesetzFunktion.png'>";
                         }
                         elseif($funktionsdaten['priv_ohne_beratung'] == 'funktionGesetz'){
-                            echo "<img title='Gesetz bedingt durch Funktion'src='css/images/pfeile/funktionGesetz.png'>";
+                            echo "<img title='Gesetz bedingt durch Funktion'src='../css/images/pfeile/funktionGesetz.png'>";
                         }
                         else{ echo"";}
                     ?>
@@ -104,10 +104,10 @@ if(Yii::app()->user->level>=5){
                     <td>
                     <?php 
                         if($funktionsdaten['prof_ohne_beratung'] == 'gesetzFunktion'){
-                            echo "<img title='Funktion bedingt durch Gesetz' src='css/images/pfeile/gesetzFunktion.png'>";
+                            echo "<img title='Funktion bedingt durch Gesetz' src='../css/images/pfeile/gesetzFunktion.png'>";
                         }
                         elseif($funktionsdaten['prof_ohne_beratung'] == 'funktionGesetz'){
-                            echo "<img title='Gesetz bedingt durch Funktion'src='css/images/pfeile/funktionGesetz.png'>";
+                            echo "<img title='Gesetz bedingt durch Funktion'src='../css/images/pfeile/funktionGesetz.png'>";
                         }
                         else{ echo"";}
                     ?>
@@ -115,10 +115,10 @@ if(Yii::app()->user->level>=5){
                     <td>
                     <?php 
                         if($funktionsdaten['r_ausf_geschaeft'] == 'gesetzFunktion'){
-                            echo "<img title='Funktion bedingt durch Gesetz' src='css/images/pfeile/gesetzFunktion.png'>";
+                            echo "<img title='Funktion bedingt durch Gesetz' src='../css/images/pfeile/gesetzFunktion.png'>";
                         }
                         elseif($funktionsdaten['r_ausf_geschaeft'] == 'funktionGesetz'){
-                            echo "<img title='Gesetz bedingt durch Funktion'src='css/images/pfeile/funktionGesetz.png'>";
+                            echo "<img title='Gesetz bedingt durch Funktion'src='../css/images/pfeile/funktionGesetz.png'>";
                         }
                         else{ echo"";}
                     ?>
@@ -300,37 +300,37 @@ if(Yii::app()->user->level>=5){
                 </tr>
                 <tr>
                     <?php if($funktionsdaten['hsr_aktuell'] == 'gruen') { ?>
-                        <td> <img src='css/images/pfeile/gruen.png'></td>
+                        <td> <img src='../css/images/pfeile/gruen.png'></td>
                     <?php }
                     elseif($funktionsdaten['hsr_aktuell'] == 'gelb') { ?>
-                        <td> <img src='css/images/pfeile/gelb.png'></td>
+                        <td> <img src='../css/images/pfeile/gelb.png'></td>
                     <?php }
                     elseif($funktionsdaten['hsr_aktuell'] == 'gelbHoch'){ 
-                        echo "<td> <img src='css/images/pfeile/gelbHoch.png'></td>";
+                        echo "<td> <img src='../css/images/pfeile/gelbHoch.png'></td>";
                     }
                     elseif($funktionsdaten['hsr_aktuell'] == 'gelbRunter'){ 
-                        echo "<td > <img style='transform: rotate(180deg);' src='css/images/pfeile/gelbHoch.png'></td>";
+                        echo "<td > <img style='transform: rotate(180deg);' src='../css/images/pfeile/gelbHoch.png'></td>";
                     }
                     elseif($funktionsdaten['hsr_aktuell'] == 'rot') { ?>
-                        <td> <img src='css/images/pfeile/rot.png'></td>
+                        <td> <img src='../css/images/pfeile/rot.png'></td>
                     <?php }
                     else{ ?>
                         <td style="background-color: #ffffff;"> </td>
                     <?php }
                     if($funktionsdaten['hsr_zukuenftig'] == 'gruen') { ?>
-                        <td> <img src='css/images/pfeile/gruen.png'></td>
+                        <td> <img src='../css/images/pfeile/gruen.png'></td>
                     <?php }
                     elseif($funktionsdaten['hsr_zukuenftig'] == 'gelb') { ?>
-                        <td> <img src='css/images/pfeile/gelb.png'></td>
+                        <td> <img src='../css/images/pfeile/gelb.png'></td>
                     <?php }
                     elseif($funktionsdaten['hsr_zukuenftig'] == 'gelbHoch'){ 
-                        echo "<td> <img src='css/images/pfeile/gelbHoch.png'></td>"; 
+                        echo "<td> <img src='../css/images/pfeile/gelbHoch.png'></td>"; 
                     }
                     elseif($funktionsdaten['hsr_zukuenftig'] == 'gelbRunter'){ 
-                        echo "<td > <img style='transform: rotate(180deg);' src='css/images/pfeile/gelbHoch.png'></td>";
+                        echo "<td > <img style='transform: rotate(180deg);' src='../css/images/pfeile/gelbHoch.png'></td>";
                     }
                     elseif($funktionsdaten['hsr_zukuenftig'] == 'rot') { ?>
-                        <td> <img src='css/images/pfeile/rot.png'></td>
+                        <td> <img src='../css/images/pfeile/rot.png'></td>
                     <?php } 
                     else{ ?>
                         <td style="background-color: #ffffff;"> </td>

@@ -38,12 +38,12 @@
                                 ),
 				array(  'label'=>'Benutzerverwaltung', 
                                         'url'=>array('/userGroups/admin'), 
-                                        'visible'=>Yii::app()->user->level>2000,
-                                ),/*
+                                        'visible'=>Yii::app()->user->level>10,
+                                ),
                                 array(  'label'=>'Übersicht', 
                                         'url'=>array('/userGroups/user/view'), 
                                         'visible'=>Yii::app()->user->groupName==='Registration',
-                                ),*/
+                                ),
                                 array(  'label'=>'Kontakt', 
                                         'url'=>array('/site/contact')
                                 ),

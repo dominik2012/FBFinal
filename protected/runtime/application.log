@@ -1627,3 +1627,1304 @@ Stack trace:
 REQUEST_URI=/FBFinal/index.php?r=site/filter
 HTTP_REFERER=http://localhost/FBFinal/index.php?r=site/filter
 ---
+2013/01/30 10:22:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'finanzberatung'' in C:\xampp\htdocs\FBFinal\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\FBFinal\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\FBFinal\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\FBFinal\framework\base\CModule.php(104): CModule->getComponent('db')
+#4 C:\xampp\htdocs\FBFinal\protected\modules\userGroups\UserGroupsModule.php(69): CModule->__get('db')
+#5 C:\xampp\htdocs\FBFinal\framework\web\CController.php(264): UserGroupsModule->beforeControllerAction(Object(UGDefaultController), Object(CInlineAction))
+#6 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('')
+#7 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('userGroups')
+#8 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/FBFinal/index.php?r=userGroups
+HTTP_REFERER=http://localhost/FBFinal/
+---
+2013/01/30 16:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Testkandidat02".' in C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('Testkandidat02')
+#1 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/FBFinal/userGroups?r=Testkandidat02
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery-ui".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('jquery-ui')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('jquery-ui')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/jquery-ui/...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/jquery-ui/js/jquery-ui-1.9.0.custom.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery-multi".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('jquery-multi')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('jquery-multi')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/jquery-mul...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/jquery-multi/css/jquery-ui-1.8.9.custom/jquery-ui-1.8.9.custom.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "multiselect".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('multiselect')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('multiselect')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/multiselec...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/multiselect/jquery.multiselect.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery-multi".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('jquery-multi')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('jquery-multi')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/jquery-mul...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/jquery-multi/jquery.multi-accordion-1.5.3.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery-ui".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('jquery-ui')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('jquery-ui')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/jquery-ui/...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/jquery-ui/js/jquery-1.8.2.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "multiselect".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('multiselect')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('multiselect')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/multiselec...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/multiselect/src/jquery.multiselect.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/funktionGesetz.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/funktionGesetz.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/funktionGesetz.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:29:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('index.php')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/index.php')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/index.php?r=site/filter
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/funktionGesetz.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/funktionGesetz.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:30:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "site".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('site')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('site')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/site/filte...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/site/filter
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/funktionGesetz.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/funktionGesetz.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/funktionGesetz.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/null.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/funktionGesetz.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gesetzFunktion.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelb.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gruen.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:31:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('css')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('css')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/css/images...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/css/images/pfeile/gelbHoch.png
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:35:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('index.php')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/index.php')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/index.php?r=site/details&fktNr=1
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:37:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('index.php')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/index.php')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/index.php?r=site/details&fktNr=1
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:37:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:37:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:37:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:37:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:37:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "details&fktNr=1".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('details&fktNr=1')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('details&fktNr=1')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/details&fk...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/details&fktNr=1
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:38:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:38:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:38:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "details&fktNr=1".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('details&fktNr=1')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('details&fktNr=1')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/details&fk...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/details&fktNr=1
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:39:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "details&fktNr=18".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('details&fktNr=1...')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('details&fktNr=1...')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/details&fk...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/details&fktNr=18
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:41:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:41:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:41:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "details&fktNr=2".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('details&fktNr=2')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('details&fktNr=2')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/details&fk...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/details&fktNr=2
+HTTP_REFERER=http://localhost/FBFinal/site/details?fktNr=1
+---
+2013/01/30 16:43:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:43:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:43:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:43:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:54:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:54:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:54:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:54:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:55:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 16:55:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 17:08:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\FBFinal\protected\modules\userGroups\components\UserGroupsAccessControl.php:97
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\auth\CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 C:\xampp\htdocs\FBFinal\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\FBFinal\protected\components\Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\FBFinal\framework\web\filters\CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\FBFinal\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\FBFinal\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('userGroups/admi...')
+#9 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/FBFinal/userGroups/admin
+HTTP_REFERER=http://localhost/FBFinal/site
+---
+2013/01/30 17:08:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\FBFinal\protected\modules\userGroups\components\UserGroupsAccessControl.php:97
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\auth\CAccessControlFilter.php(133): UserGroupsAccessControl->accessDenied(Object(WebUserGroups), 'You are not aut...')
+#1 C:\xampp\htdocs\FBFinal\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\FBFinal\protected\components\Controller.php(43): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\FBFinal\framework\web\filters\CInlineFilter.php(59): Controller->filterUserGroupsAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\FBFinal\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\FBFinal\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\FBFinal\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('')
+#8 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('userGroups/admi...')
+#9 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/FBFinal/userGroups/admin
+HTTP_REFERER=http://localhost/FBFinal/userGroups/admin
+---
+2013/01/30 17:12:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.css
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
+2013/01/30 17:12:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chosen-master".' in C:\xampp\htdocs\FBFinal\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\FBFinal\framework\web\CController.php(271): CController->missingAction('chosen-master')
+#1 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(283): CController->run('chosen-master')
+#2 C:\xampp\htdocs\FBFinal\framework\web\CWebApplication.php(142): CWebApplication->runController('site/chosen-mas...')
+#3 C:\xampp\htdocs\FBFinal\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\FBFinal\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/FBFinal/site/chosen-master/chosen/chosen.jquery.js
+HTTP_REFERER=http://localhost/FBFinal/site/filter
+---
