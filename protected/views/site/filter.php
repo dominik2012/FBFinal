@@ -25,6 +25,13 @@
         
         return $title;
     }
+    
+    function shortTitle($inhalt){
+        $inhalt = substr($inhalt, 0 , 52);
+        $inhalt .= "...";
+        
+        return $inhalt;
+    }
 ?>
 <!-- FUNCTIONS ENDE ----------------------------------------------------------->
 <?php
@@ -42,9 +49,6 @@ if(Yii::app()->user->level>=5){
     <script src="../jquery-ui/js/jquery-ui-1.9.0.custom.js"></script>
     <script src="../jquery-multi/jquery.multi-accordion-1.5.3.js"></script>
     <script src="../multiselect/src/jquery.multiselect.js"></script>
-    
-    <link rel="stylesheet" href="chosen-master/chosen/chosen.css">
-    <script src="chosen-master/chosen/chosen.jquery.js"></script>
     
     <script type="text/javascript">
     //VIEWFILTER
@@ -79,6 +83,9 @@ if(Yii::app()->user->level>=5){
                                 $nummer = $i;
                                 $inhalt = $model2[1]["grobphase"][$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                             
                                 echo '<option value="'.$i.'" id="grobphase'.$i.'" name="grobphase'.$i.'" title="'.$title.'");>'.$nummer.'. '.$inhalt.'</option>';
                             	
@@ -96,6 +103,9 @@ if(Yii::app()->user->level>=5){
                                 $nummer = $i;
                                 $inhalt = $model2[1]["unterphase"][$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                 
                                 echo '<option value="'.$i.'" id="unterphase'.$i.'" name="unterphase'.$i.'" title="'.$title.'");>'.$nummer.'.'.$inhalt.'</option>';
                             	
@@ -311,8 +321,11 @@ if(Yii::app()->user->level>=5){
                                 
                                 $inhalt = $model2[1]["name"][$i];
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                     
-                                echo '<option value="'.($i+1).'" id="name'.$i.'" name="name'.$i.'" title="'.$title.'");>'.$model2[1]["name"][$i].'</option>';
+                                echo '<option value="'.($i+1).'" id="name'.$i.'" name="name'.$i.'" title="'.$title.'");>'.$inhalt.'</option>';
                             	
 			}    
                 ?>
@@ -357,6 +370,9 @@ if(Yii::app()->user->level>=5){
                             for ($i=3;$i<4;$i++){
                                 $inhalt = $model6[$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                 echo '<option value="'.$model5[$i].'" id="'.$model5[$i].'" name="'.$model5[$i].'" title="'.$title.'");>'.$inhalt.'</option>';
                             }
                             echo '</optgroup>';
@@ -366,6 +382,9 @@ if(Yii::app()->user->level>=5){
                             for ($i=4;$i<8;$i++){
                                 $inhalt = $model6[$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                 echo '<option value="'.$model5[$i].'" id="'.$model5[$i].'" name="'.$model5[$i].'" title="'.$title.'");>'.$inhalt.'</option>';
                             }
                             // Reines Ausfuehrungsgeschaeft
@@ -377,18 +396,27 @@ if(Yii::app()->user->level>=5){
                             for ($i=8;$i<9;$i++){
                                 $inhalt = $model6[$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                 echo '<option value="'.$model5[$i].'" id="'.$model5[$i].'" name="'.$model5[$i].'" title="'.$title.'");>'.$inhalt.'</option>';
                             }
                             
                             //Business Rule
                             $inhalt_br = $model6[45];
                             $title_br = str_replace('"',"&#039;",  shortName($inhalt_br));
+                            if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                             echo '<option value="'.$model5[45].'" id="'.$model5[45].'" name="'.$model5[45].'" title="'.$title_br.'");>'.$inhalt_br.'</option>';
                             
                             
                             //Auslegung
                             $inhalt_auslegung = $model6[46];
                             $title_auslegung = str_replace('"',"&#039;",  shortName($inhalt_auslegung));
+                            if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                             echo '<option value="'.$model5[46].'" id="'.$model5[46].'" name="'.$model5[46].'" title="'.$title_auslegung.'");>'.$inhalt_auslegung.'</option>';
                             echo '</optgroup>';
 							
@@ -397,6 +425,9 @@ if(Yii::app()->user->level>=5){
                             for ($i=10;$i<12;$i++){
                                 $inhalt = $model6[$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                 echo '<option value="'.$model5[$i].'" id="'.$model5[$i].'" name="'.$model5[$i].'" title="'.$title.'");>'.$inhalt.'</option>';
                             }
                             echo '</optgroup>';
@@ -406,6 +437,9 @@ if(Yii::app()->user->level>=5){
                             for ($i=13;$i<21;$i++){
                                 $inhalt = $model6[$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                 echo '<option value="'.$model5[$i].'" id="'.$model5[$i].'" name="'.$model5[$i].'" title="'.$title.'");>'.$inhalt.'</option>';
                             }
                             echo '</optgroup>';
@@ -415,6 +449,9 @@ if(Yii::app()->user->level>=5){
                             for ($i=22;$i<27;$i++){
                                 $inhalt = $model6[$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                 echo '<option value="'.$model5[$i].'" id="'.$model5[$i].'" name="'.$model5[$i].'" title="'.$title.'");>'.$inhalt.'</option>';
                             }
                             echo '</optgroup>';
@@ -422,6 +459,9 @@ if(Yii::app()->user->level>=5){
                             for ($i=30;$i<35;$i++){
                                 $inhalt = $model6[$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                 echo '<option value="'.$model5[$i].'" id="'.$model5[$i].'" name="'.$model5[$i].'" title="'.$title.'");>'.$inhalt.'</option>';
                             }
                             echo '</optgroup>';	
@@ -429,6 +469,9 @@ if(Yii::app()->user->level>=5){
                             for ($i=35;$i<40;$i++){
                                 $inhalt = $model6[$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                 echo '<option value="'.$model5[$i].'" id="'.$model5[$i].'" name="'.$model5[$i].'" title="'.$title.'");>'.$inhalt.'</option>';
                             }
                             echo '</optgroup>';
@@ -436,6 +479,9 @@ if(Yii::app()->user->level>=5){
                             for ($i=40;$i<45;$i++){
                                 $inhalt = $model6[$i]; 
                                 $title = str_replace('"',"&#039;",  shortName($inhalt));
+                                if($title != ""){
+                                    $inhalt = shortTitle($inhalt);
+                                }
                                 echo '<option value="'.$model5[$i].'" id="'.$model5[$i].'" name="'.$model5[$i].'" title="'.$title.'");>'.$inhalt.'</option>';
                             }
                             echo '</optgroup>';
@@ -717,7 +763,6 @@ if(Yii::app()->user->level>=5){
         
         var link = 'details?fktNr='+fktNr;
         
-        //Testen auf IE
         if(-[1,]){
             window.open(link);
         }else{
@@ -769,7 +814,6 @@ if(Yii::app()->user->level>=5){
                 document.body.appendChild(popup);
                 
                 $('#popup_' + popupID).draggable();
-                //}
                 return false;
      });
 
@@ -866,7 +910,7 @@ if(Yii::app()->user->level>=5){
 <!-- FUNKTIONSFILTER SHOW/HIDE ------------------------------------------------>   
 <script type="text/javascript"> 
     var State1 = 'function';
-    var State2 = State1 + ' functionhover';
+    var State2 = 'functionhover';
     var div = document.getElementById("function");
 
     function togglestate(){

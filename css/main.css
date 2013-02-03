@@ -519,6 +519,7 @@ body
         -o-transition: all 1.0s ease-in;
         transition: all 1.0s ease-in;
 }
+
 #function_name
 {
         -webkit-transform: rotate(90deg);
