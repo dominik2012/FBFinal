@@ -1146,8 +1146,8 @@ if(Yii::app()->user->level>=5){
                                     bufferGrobphase = bufferGrobphase +"," +"'" + document.neu_form.select_grobphase.options[i].value + "'";
 				}
 			}
+                        
 			j=0;
-			//alert("hoho");
 			for (var i=0; i<len2; i++)
 			{
 				if (document.neu_form.select_unterphase.options[i].selected && j==0){
@@ -1158,7 +1158,7 @@ if(Yii::app()->user->level>=5){
                                     bufferUnterphase = bufferUnterphase +","+document.neu_form.select_unterphase.options[i].value;
 				}
 			}
-			//alert("hehe");
+			
 			j=0;
 			for (var i=0; i<len3; i++)
 			{
@@ -1170,6 +1170,7 @@ if(Yii::app()->user->level>=5){
                                     bufferName = bufferName +","+document.neu_form.select_name.options[i].value;
 				}
 			}
+                        
 			j=0;
 			for (var i=0; i<len4; i++)
 			{
@@ -1193,6 +1194,7 @@ if(Yii::app()->user->level>=5){
                                     bufferProfMB = bufferProfMB +","+"'"+document.neu_form.select_profmb.options[i].value+"'";
 				}
 			}
+                        
 			j=0;
 			for (var i=0; i<len4; i++)
 			{
@@ -1204,6 +1206,7 @@ if(Yii::app()->user->level>=5){
                                     bufferPrivOB = bufferPrivOB +","+"'"+document.neu_form.select_privob.options[i].value+"'";
 				}
 			}
+                        
 			j=0;
 			for (var i=0; i<len4; i++)
 			{
@@ -1215,6 +1218,7 @@ if(Yii::app()->user->level>=5){
                                     bufferProfOB = bufferProfOB +","+"'"+document.neu_form.select_profob.options[i].value+"'";
 				}
 			}
+                        
 			j=0;
 			for (var i=0; i<len4; i++)
 			{
@@ -1226,6 +1230,7 @@ if(Yii::app()->user->level>=5){
                                     bufferRausfg = bufferRausfg +","+"'"+document.neu_form.select_rausfg.options[i].value+"'";
 				}
 			}
+                        
 			j=0;
 			for (var i=0; i<len5; i++)
 			{
@@ -1237,6 +1242,7 @@ if(Yii::app()->user->level>=5){
                                     bufferHsra = bufferHsra +","+"'"+document.neu_form.select_hsra.options[i].value+"'";
 				}
 			}
+                        
 			j=0;
 			for (var i=0; i<len6; i++)
 			{
@@ -1248,6 +1254,7 @@ if(Yii::app()->user->level>=5){
                                     bufferHsrz = bufferHsrz +","+"'"+document.neu_form.select_hsrz.options[i].value+"'";
 				}
 			}
+                        
 			for (var i=0; i<len7; i++)
 			{
 				if (document.neu_form.select_gesetze.options[i].selected && j==0){
@@ -1258,6 +1265,7 @@ if(Yii::app()->user->level>=5){
                                     bufferGesetze = bufferGesetze +","+"'"+document.neu_form.select_gesetze.options[i].value+"'";
 				}
 			}
+                        
 			document.neu_form.form_grobphase.value= bufferGrobphase;
 			document.neu_form.form_unterphase.value= bufferUnterphase;
 			document.neu_form.form_name.value= bufferName;
@@ -1270,6 +1278,7 @@ if(Yii::app()->user->level>=5){
 			document.neu_form.form_hsrz.value=bufferHsrz;
 			document.neu_form.form_gesetze.value=bufferGesetze;
 			document.neu_form.submit();
+                        
                         document.body.style.cursor="default";
                         
 	}
