@@ -941,22 +941,16 @@ if(Yii::app()->user->level>=5){
 
 <!-- MULTISELECT -------------------------------------------------------------->   
 <script type="text/javascript"> 
-	function dump(obj) {
-    var out = '';
-    for (var i in obj) {
-        out += i + ": " + obj[i] + "\n";
-    }
-
-    alert(out);
-	}
+    
+    //Anzeigefilter
+    //Anzeigen der Attribute
     $("#multiselect").multiselect({
         header: false,
         height: 500,
         selectedText: "# von # ausgewählt",
-        noneSelectedText: 'Wählen Sie Ihre Spalten',
 		optgrouptoggle: function(event, ui){
 		var values = $.map(ui.inputs, function(checkbox){
-         return checkbox.value;
+                    return checkbox.value;
 		}).join(", ");
 		var val = values.split(", ");
 
@@ -972,7 +966,8 @@ if(Yii::app()->user->level>=5){
 		}
 		}
     });
-
+    
+    //Ausblenden der Attribute
     $("#multiselect").bind("multiselectclick", function(event, ui){
         
         var value = ui.value;
@@ -986,132 +981,113 @@ if(Yii::app()->user->level>=5){
             $(val).css('display','block');
         }
     });
-    $("#multiselect").bind("optgrouptoggle", function(event, ui){
-	alert ("jojo");
-        var values = $.map(ui.inputs, function(checkbox){
-         for(var i=0;i<values.length;i++){
-			var val = '.'+values[i];
-			alert(val);
-			if($(val).is(':visible')){
-				$(val).css('display','none');
-			}
-        else{
-            $(val).css('display','block');
-			}
-		}
-		}
-    )});
+    
+    //Funktionsfilter
     $("#select_grobphase").multiselect({
         selectedText: "# von # ausgewählt",
         height: 344,
         noneSelectedText: 'Wählen Sie Ihre Grobphase(n)'
     });
 	$("#select_grobphase").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});
-	$("#select_unterphase").multiselect({
+            var value = ui.value;
+	});
+        
+    $("#select_unterphase").multiselect({
         selectedText: "# von # ausgewählt",
         height: 345,
         noneSelectedText: 'Wählen Sie Ihre Unterphase(n)'
     });
 	$("#select_unterphase").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});	
-	$("#select_unterphase").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});	
-		$("#select_gesetze").multiselect({
+            var value = ui.value;
+	});
+	
+    $("#select_gesetze").multiselect({
         selectedText: "# von # ausgewählt",
         height: 345,
         noneSelectedText: 'Wählen Sie Ihr(e) Gesetz(e)'
     });
 	$("#select_gesetze").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});
-	$("#select_name").multiselect({
+            var value = ui.value;
+        });
+        
+    $("#select_name").multiselect({
         selectedText: "# von # ausgewählt",
         height: 295,
         noneSelectedText: 'Wählen Sie Ihre Funktion(en)'
     });
 	$("#select_name").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});
-	$("#select_privmb").multiselect({
+            var value = ui.value;
+	});
+        
+    $("#select_privmb").multiselect({
         header: false,
         height: 85,
         selectedText: "# von # ausgewählt",
         noneSelectedText: 'auswählen'        
     });
 	$("#select_privmb").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});	
-	$("#select_profmb").multiselect({
+            var value = ui.value;
+	});
+	
+    $("#select_profmb").multiselect({
         header: false,
         height: 85,
         selectedText: "# von # ausgewählt",
         noneSelectedText: 'auswählen'
-        
     });
 	$("#select_profmb").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});	
-	$("#select_privob").multiselect({
+            var value = ui.value;
+	});
+	
+    $("#select_privob").multiselect({
         header: false,
         height: 85,
         selectedText: "# von # ausgewählt",
         noneSelectedText: 'auswählen'
     });
 	$("#select_privob").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});	
-	$("#select_profob").multiselect({
+            var value = ui.value;
+	});
+	
+    $("#select_profob").multiselect({
         header: false,
         height: 85,
         selectedText: "# von # ausgewählt",
         noneSelectedText: 'auswählen'
     });
 	$("#select_profob").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});
-	$("#select_rausfg").multiselect({
+            var value = ui.value;
+	});
+        
+    $("#select_rausfg").multiselect({
         header: false,
         height: 85,
         selectedText: "# von # ausgewählt",
         noneSelectedText: 'auswählen'
     });
 	$("#select_rausfg").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});
-	$("#select_hsra").multiselect({
+            var value = ui.value;
+	});
+        
+    $("#select_hsra").multiselect({
         header: false,
         height: 85,
         selectedText: "# von # ausgewählt",
         noneSelectedText: 'auswählen'
     });
 	$("#select_hsra").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});
-	$("#select_hsrz").multiselect({
+            var value = ui.value;
+	});
+        
+    $("#select_hsrz").multiselect({
         header: false,
         height: 85,
         selectedText: "# von # ausgewählt",
         noneSelectedText: 'auswählen'
     });
 	$("#select_hsrz").bind("multiselectclick", function(event, ui){
-		
-		var value = ui.value;
-		});
+            var value = ui.value;
+	});
 		
 </script>        
 
@@ -1134,10 +1110,6 @@ if(Yii::app()->user->level>=5){
 	$(function(){
 		$('#multiAccordion').multiAccordion();
 	});
-</script>
-
-<script>
-    $( "#accordion" ).accordion({ heightStyle: "content", collapsible: true });
 </script>
 
 <script> 
