@@ -58,7 +58,8 @@ if(Yii::app()->user->level>=5){
     <div class="beratung">
         <div class="topline">Beratung</div>
         <div class="inhalt3">
-      <?php if($funktionsdaten['priv_mit_beratung'] != "keine Abhängig" && $funktionsdaten['prof_mit_beratung'] != "keine Abhängig" && $funktionsdaten['priv_ohne_beratung'] != "keine Abhängig" && $funktionsdaten['prof_ohne_beratung'] != "keine Abhängig" && $funktionsdaten['r_ausf_geschaeft'] != "keine Abhängig"){ ?>
+      <?php if($funktionsdaten['priv_mit_beratung'] == "keine Abhängig" && $funktionsdaten['prof_mit_beratung'] == "keine Abhängig" && $funktionsdaten['priv_ohne_beratung'] == "keine Abhängig" && $funktionsdaten['prof_ohne_beratung'] == "keine Abhängig" && $funktionsdaten['r_ausf_geschaeft'] == "keine Abhängig"){}
+      else {?>
             <table class="inhalte">
                 <tr>
                     <td>Privat mit Beratung</td>
